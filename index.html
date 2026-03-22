@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asheville Airport Express</title>
+
+  <meta
+    name="description"
+    content="Asheville Airport Express - 24/7 airport transportation by appointment. Call now to schedule your ride."
+  />
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #111a2b;
+      --text: #ffffff;
+      --muted: #b8c2d6;
+      --accent: #d4af37;
+      --accent-hover: #e6c65a;
+      --radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    .logo {
+      width: min(100%, 420px);
+      margin: 0 auto 26px;
+      display: block;
+      border-radius: 20px;
+
+      /* slight smoothing */
+      filter: brightness(1.1) contrast(1.1);
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 36px 30px 30px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin: 0 0 6px;
+    }
+
+    .sub {
+      font-size: 1.05rem;
+      color: #ccc;
+      margin-bottom: 22px;
+    }
+
+    .lead {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .call-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 16px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .call-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    @media (max-width: 640px) {
+      .logo {
+        width: min(100%, 300px);
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <!-- LOGO (ABOVE CARD) -->
+    <img
+      src="./img/asheville_airport_express_logo.png"
+      class="logo"
+      alt="Asheville Airport Express"
+    />
+
+    <!-- CARD -->
+    <div class="card">
+
+      <h1>Available 24/7</h1>
+      <div class="sub">By Appointment</div>
+
+      <div class="lead">
+        Call to schedule your airport pickup or drop-off
+      </div>
+
+      <!-- CALL BUTTON -->
+      <a href="tel:+18283977377" class="call-btn">
+        Call 828-397-7377
+      </a>
+
+    </div>
+  </div>
+</body>
+</html>
