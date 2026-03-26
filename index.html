@@ -7,7 +7,7 @@
 
   <meta
     name="description"
-    content="Asheville Airport Express - 24/7 airport transportation by appointment. Call now to schedule your ride."
+    content="Asheville Airport Express - 24/7 airport transportation by appointment. Call now or book online."
   />
 
   <style>
@@ -19,6 +19,8 @@
       --accent: #d4af37;
       --accent-hover: #e6c65a;
       --radius: 20px;
+      --line: rgba(255,255,255,0.08);
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
     }
 
     * {
@@ -27,7 +29,7 @@
 
     html, body {
       margin: 0;
-      height: 100%;
+      min-height: 100%;
     }
 
     body {
@@ -42,7 +44,7 @@
 
     .wrap {
       width: 100%;
-      max-width: 520px;
+      max-width: 560px;
       text-align: center;
     }
 
@@ -51,16 +53,15 @@
       margin: 0 auto 26px;
       display: block;
       border-radius: 20px;
-
-      /* slight smoothing */
-      filter: brightness(1.1) contrast(1.1);
+      filter: brightness(1.05) contrast(1.05);
     }
 
     .card {
       background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 36px 30px 30px;
+      padding: 36px 28px 28px;
+      box-shadow: var(--shadow);
     }
 
     h1 {
@@ -71,29 +72,38 @@
     .sub {
       font-size: 1.05rem;
       color: #ccc;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .lead {
       color: var(--muted);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
     .call-btn {
-      display: inline-block;
+      display: block;
       width: 100%;
       padding: 16px;
       border-radius: 999px;
       background: var(--accent);
       color: #000;
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       text-decoration: none;
+      margin-bottom: 20px;
       transition: 0.2s ease;
     }
 
     .call-btn:hover {
       background: var(--accent-hover);
+    }
+
+    .widget {
+      width: 100%;
+      height: 650px;
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
     }
 
     @media (max-width: 640px) {
@@ -104,14 +114,31 @@
       h1 {
         font-size: 1.6rem;
       }
+
+      .widget {
+        height: 600px;
+      }
     }
   </style>
+
+  <!-- Moovs Script -->
+  <script>
+    window["moovsAPI"] = moovsAPI = window["moovsAPI"] || [];
+    moovsAPI.push(["operator", "d67a28ae-2916-11f1-ae3d-f714c215a04d"]);
+    (function(m, oo, v, s) {
+      s = m.createElement(oo);
+      s.src = v;
+      s.async = 1;
+      m.head.appendChild(s);
+    })(document, "script", "https://static.moovs.app");
+  </script>
+
 </head>
 
 <body>
   <div class="wrap">
 
-    <!-- LOGO (ABOVE CARD) -->
+    <!-- LOGO -->
     <img
       src="./img/asheville_airport_express_logo.png"
       class="logo"
@@ -125,7 +152,7 @@
       <div class="sub">By Appointment</div>
 
       <div class="lead">
-        Call to schedule your airport pickup or drop-off
+        Call or book your airport ride below
       </div>
 
       <!-- CALL BUTTON -->
@@ -133,7 +160,15 @@
         Call 828-397-7377
       </a>
 
+      <!-- MOOVS BOOKING WIDGET -->
+      <iframe
+        src="https://customer.moovs.app/airport-express-llc/iframe"
+        class="widget"
+        title="Book a Ride"
+      ></iframe>
+
     </div>
+
   </div>
 </body>
 </html>
