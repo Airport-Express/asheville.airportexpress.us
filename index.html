@@ -37,7 +37,6 @@
       background: var(--bg);
       color: var(--text);
       display: flex;
-      align-items: center;
       justify-content: center;
       padding: 24px;
     }
@@ -53,7 +52,6 @@
       margin: 0 auto 26px;
       display: block;
       border-radius: 20px;
-      filter: brightness(1.05) contrast(1.05);
     }
 
     .card {
@@ -62,6 +60,7 @@
       border-radius: var(--radius);
       padding: 36px 28px 28px;
       box-shadow: var(--shadow);
+      margin-bottom: 18px;
     }
 
     h1 {
@@ -90,7 +89,6 @@
       font-weight: 700;
       font-size: 1.15rem;
       text-decoration: none;
-      margin-bottom: 20px;
       transition: 0.2s ease;
     }
 
@@ -104,6 +102,12 @@
       border: none;
       border-radius: 16px;
       overflow: hidden;
+    }
+
+    .widget-title {
+      margin-bottom: 14px;
+      font-size: 1.2rem;
+      font-weight: 600;
     }
 
     @media (max-width: 640px) {
@@ -145,22 +149,27 @@
       alt="Asheville Airport Express"
     />
 
-    <!-- CARD -->
+    <!-- TOP CARD -->
     <div class="card">
 
       <h1>Available 24/7</h1>
       <div class="sub">By Appointment</div>
 
       <div class="lead">
-        Call or book your airport ride below
+        Call to schedule your airport pickup or drop-off
       </div>
 
-      <!-- CALL BUTTON -->
       <a href="tel:+18283977377" class="call-btn">
         Call 828-397-7377
       </a>
 
-      <!-- MOOVS BOOKING WIDGET -->
+    </div>
+
+    <!-- BOOKING CARD -->
+    <div class="card">
+
+      <div class="widget-title">Book Online</div>
+
       <iframe
         src="https://customer.moovs.app/airport-express-llc/iframe"
         class="widget"
