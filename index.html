@@ -7,7 +7,7 @@
 
   <meta
     name="description"
-    content="Asheville Airport Express - Reliable airport transportation serving AVL and Western North Carolina."
+    content="Asheville Airport Express - Reliable airport transportation based in Asheville North Carolina."
   />
 
   <style>
@@ -23,9 +23,7 @@
       --shadow: 0 18px 50px rgba(0,0,0,0.35);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
@@ -64,9 +62,7 @@
       text-align: left;
     }
 
-    .card.center {
-      text-align: center;
-    }
+    .card.center { text-align: center; }
 
     .description {
       color: var(--muted);
@@ -121,11 +117,11 @@
       font-weight: 600;
     }
 
-    .list em {
+    .note {
       color: #aaa;
       font-size: 0.95rem;
+      margin-top: 6px;
       display: block;
-      margin-top: 4px;
     }
 
     .field-label {
@@ -147,36 +143,23 @@
       outline: none;
     }
 
-    .input::placeholder {
-      color: #8fa0bd;
-    }
-
-    .calc-note {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 18px;
-      line-height: 1.6;
-    }
-
     .estimate-box {
       margin-top: 18px;
       padding: 18px;
       border-radius: 16px;
       background: rgba(255,255,255,0.03);
       border: 1px solid var(--line);
+      display: none;
     }
 
     .estimate-row {
       display: flex;
       justify-content: space-between;
-      gap: 16px;
       margin-bottom: 10px;
       color: var(--muted);
     }
 
-    .estimate-row strong {
-      color: #fff;
-    }
+    .estimate-row strong { color: #fff; }
 
     .estimate-total {
       margin-top: 14px;
@@ -184,7 +167,6 @@
       border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
-      gap: 16px;
       font-size: 1.15rem;
       font-weight: 700;
       color: #fff;
@@ -195,44 +177,25 @@
       height: 650px;
       border: none;
       border-radius: 16px;
-      overflow: hidden;
     }
 
     @media (max-width: 640px) {
-      .logo {
-        width: min(100%, 300px);
-      }
-
-      .widget {
-        height: 600px;
-      }
+      .logo { width: min(100%, 300px); }
+      .widget { height: 600px; }
     }
   </style>
-
-  <script>
-    window["moovsAPI"] = moovsAPI = window["moovsAPI"] || [];
-    moovsAPI.push(["operator", "d67a28ae-2916-11f1-ae3d-f714c215a04d"]);
-    (function(m, oo, v, s) {
-      s = m.createElement(oo);
-      s.src = v;
-      s.async = 1;
-      m.head.appendChild(s);
-    })(document, "script", "https://static.moovs.app");
-  </script>
 </head>
 
 <body>
   <div class="wrap">
 
-    <img
-      src="./img/asheville_airport_express_logo.png"
-      class="logo"
-      alt="Asheville Airport Express"
-    />
+    <img src="./img/asheville_airport_express_logo.png" class="logo" />
 
+    <!-- CARD 1 -->
     <div class="card">
+
       <div class="description">
-        Asheville Airport Express is a professional airport transportation service based in Asheville, serving AVL and the surrounding Western North Carolina region.
+        Asheville Airport Express is a professional airport transportation service based in Asheville North Carolina.
         <br><br>
         We offer premium vehicles with comfortable, all-leather interiors, delivering punctual, stress-free airport rides with flat-rate pricing and dependable service.
       </div>
@@ -242,113 +205,80 @@
       <a href="tel:+18283977377" class="call-btn">
         828-397-7377
       </a>
+
     </div>
 
+    <!-- HOURS & RATES -->
     <div class="card">
+
       <div class="section-title">Hours</div>
 
       <div class="list">
-        <div class="highlight">
-          Scheduling & Pickup Hours
-        </div>
-
+        <div class="highlight">Scheduling & Pickup Hours</div>
         Mon–Sun · 4:00 AM – 4:00 PM
-
         <br><br>
-
         <em>*After-hours and emergency pickups subject to availability</em>
       </div>
 
       <div class="section-title">Rates</div>
 
       <div class="list">
-        <span class="highlight">Flat Rate Service to or from Asheville Airport (AVL) / Downtown Asheville:</span> $65
+        <span class="highlight">Flat Rate AVL ↔ Downtown Asheville:</span> $65
         <br><br>
-        <span class="highlight">Rate by Mile:</span> $2.60 Includes taxes and processing fees w/ 25 Mile Minimum
+        <span class="highlight">Rate by Mile:</span> $2.60 Includes taxes and processing fees
+        <span class="note">*25 Mile Minimum</span>
       </div>
+
     </div>
 
+    <!-- CALCULATOR -->
     <div class="card">
+
       <div class="section-title">Trip Calculator</div>
 
-      <div class="calc-note">
-        Enter estimated trip miles below. Trips under 25 miles default to the 25-mile minimum rate of $65.
-      </div>
+      <label class="field-label">Enter Miles</label>
+      <input type="number" id="miles" class="input" placeholder="Enter trip miles" />
 
-      <label for="tripMiles" class="field-label">Estimated Miles</label>
-      <input
-        type="number"
-        id="tripMiles"
-        class="input"
-        min="0"
-        step="0.1"
-        placeholder="Enter trip miles"
-      />
+      <button class="calc-btn" onclick="calc()">Calculate</button>
 
-      <button type="button" class="calc-btn" onclick="calculateTrip()">Calculate Estimate</button>
-
-      <div class="estimate-box" id="estimateBox" style="display:none;">
-        <div class="estimate-row">
-          <span>Entered Miles</span>
-          <strong id="enteredMiles">0</strong>
-        </div>
-
+      <div class="estimate-box" id="box">
         <div class="estimate-row">
           <span>Billable Miles</span>
-          <strong id="billableMiles">25</strong>
+          <strong id="bm"></strong>
         </div>
-
-        <div class="estimate-row">
-          <span>Rate Per Mile</span>
-          <strong>$2.60</strong>
-        </div>
-
         <div class="estimate-total">
           <span>Estimated Total</span>
-          <span id="estimatedTotal">$65.00</span>
+          <span id="total"></span>
         </div>
       </div>
+
     </div>
 
+    <!-- BOOKING -->
     <div class="card center">
       <div class="section-title">Book Online</div>
 
       <iframe
         src="https://customer.moovs.app/airport-express-llc/iframe"
-        class="widget"
-        title="Book a Ride"
-      ></iframe>
+        class="widget">
+      </iframe>
     </div>
 
   </div>
 
   <script>
-    function calculateTrip() {
-      const ratePerMile = 2.60;
-      const minimumMiles = 25;
-      const minimumTotal = minimumMiles * ratePerMile;
+    function calc() {
+      let miles = parseFloat(document.getElementById("miles").value);
+      if (isNaN(miles) || miles < 0) miles = 0;
 
-      const milesInput = document.getElementById("tripMiles");
-      const estimateBox = document.getElementById("estimateBox");
-      const enteredMilesEl = document.getElementById("enteredMiles");
-      const billableMilesEl = document.getElementById("billableMiles");
-      const estimatedTotalEl = document.getElementById("estimatedTotal");
+      let billable = Math.max(miles, 25);
+      let total = billable * 2.60;
 
-      let enteredMiles = parseFloat(milesInput.value);
-
-      if (isNaN(enteredMiles) || enteredMiles < 0) {
-        enteredMiles = 0;
-      }
-
-      const billableMiles = Math.max(enteredMiles, minimumMiles);
-      const total = billableMiles < minimumMiles ? minimumTotal : billableMiles * ratePerMile;
-
-      enteredMilesEl.textContent = enteredMiles.toFixed(1);
-      billableMilesEl.textContent = billableMiles.toFixed(1);
-      estimatedTotalEl.textContent = `$${total.toFixed(2)}`;
-
-      estimateBox.style.display = "block";
+      document.getElementById("bm").textContent = billable.toFixed(1);
+      document.getElementById("total").textContent = "$" + total.toFixed(2);
+      document.getElementById("box").style.display = "block";
     }
   </script>
+
 </body>
 </html>
