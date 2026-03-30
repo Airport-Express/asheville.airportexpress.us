@@ -62,7 +62,9 @@
       text-align: left;
     }
 
-    .card.center { text-align: center; }
+    .card.center {
+      text-align: center;
+    }
 
     .description {
       color: var(--muted);
@@ -73,7 +75,8 @@
 
     .call-label {
       font-size: 1rem;
-      color: #ccc;
+      font-weight: 700;
+      color: #fff;
       margin-bottom: 10px;
       text-align: center;
     }
@@ -159,7 +162,9 @@
       color: var(--muted);
     }
 
-    .estimate-row strong { color: #fff; }
+    .estimate-row strong {
+      color: #fff;
+    }
 
     .estimate-total {
       margin-top: 14px;
@@ -180,8 +185,13 @@
     }
 
     @media (max-width: 640px) {
-      .logo { width: min(100%, 300px); }
-      .widget { height: 600px; }
+      .logo {
+        width: min(100%, 300px);
+      }
+
+      .widget {
+        height: 600px;
+      }
     }
   </style>
 </head>
@@ -189,7 +199,7 @@
 <body>
   <div class="wrap">
 
-    <img src="./img/asheville_airport_express_logo.png" class="logo" />
+    <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express" />
 
     <!-- CARD 1 -->
     <div class="card">
@@ -200,7 +210,7 @@
         We offer premium vehicles with comfortable, all-leather interiors, delivering punctual, stress-free airport rides with flat-rate pricing and dependable service.
       </div>
 
-      <div class="call-label">Call / Text</div>
+      <div class="call-label"><strong>Call / Text</strong></div>
 
       <a href="tel:+18283977377" class="call-btn">
         828-397-7377
@@ -214,10 +224,14 @@
       <div class="section-title">Hours</div>
 
       <div class="list">
-        <div class="highlight">Scheduling & Pickup Hours</div>
-        Mon–Sun · 5:00 AM – 5:00 PM
+        <div class="highlight">Dispatch Hours</div>
+        Mon–Sun · 9:00 AM – 5:00 PM
         <br><br>
-        <em>*After-hours and emergency pickups subject to availability</em>
+        24/7 service available by appointment
+        <br>
+        After-hours service fee may apply
+        <br><br>
+        <strong>Unscheduled emergency pickups available by calling 727-397-7377, subject to additional fee</strong>
       </div>
 
       <div class="section-title">Rates</div>
@@ -260,7 +274,8 @@
 
       <iframe
         src="https://customer.moovs.app/airport-express-llc/iframe"
-        class="widget">
+        class="widget"
+        title="Book Online">
       </iframe>
     </div>
 
