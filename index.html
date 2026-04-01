@@ -138,6 +138,12 @@
       margin-bottom: 6px;
     }
 
+    /* NEW: unbold helper */
+    .normal-weight {
+      font-weight: normal;
+      opacity: 0.85;
+    }
+
     .detail-link {
       color: #f0d479;
       font-weight: 700;
@@ -233,34 +239,37 @@
     </div>
 
     <!-- IMAGE DETAILS -->
-   <div class="card">
-  <div class="section-title">Flat Rate Details</div>
+    <div class="card">
+      <div class="section-title">Flat Rate Details</div>
 
-  <div class="details-list">
+      <div class="details-list">
 
-    <div class="detail-item">
-      <div class="detail-title">Asheville Airport Flat Rate Transfer (Monday - Friday)</div>
-      <div class="detail-copy">
-        Early Morning Pickup (4am - 9am) $85
-        Daily Airport Transfer (9am - 5pm) $65
+        <div class="detail-item">
+          <div class="detail-title">
+            Asheville Airport Flat Rate Transfer 
+            <span class="normal-weight">(Monday - Friday)</span>
+          </div>
+          <div class="detail-copy">
+            Early Morning Pickup (4am - 9am) $85<br>
+            Daily Airport Transfer (9am - 5pm) $65
+          </div>
+          <a href="#" class="detail-link" data-modal-open="avl-modal">
+            Click here for details
+          </a>
+        </div>
+
+        <div class="detail-item">
+          <div class="detail-title">Harrah’s Casino "Dusk til Dawn" $375</div>
+          <div class="detail-copy">
+            Round Trip Asheville - Cherokee 6pm - 6am (6 pax)
+          </div>
+          <a href="#" class="detail-link" data-modal-open="harrahs-modal">
+            Click here for details
+          </a>
+        </div>
+
       </div>
-      <a href="#" class="detail-link" data-modal-open="avl-modal">
-        Click here for details
-      </a>
     </div>
-
-    <div class="detail-item">
-      <div class="detail-title">Harrah’s Casino "Dusk til Dawn" $375</div>
-      <div class="detail-copy">
-        Round Trip Asheville - Cherokee 6pm - 6am (6 pax)
-      </div>
-      <a href="#" class="detail-link" data-modal-open="harrahs-modal">
-        Click here for details
-      </a>
-    </div>
-
-  </div>
-</div>
 
     <!-- BOOK -->
     <div class="card center">
