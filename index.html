@@ -180,7 +180,9 @@
     }
 
     .policy-trigger:hover,
-    .detail-link:hover {
+    .detail-link:hover,
+    .policy-page-link:hover,
+    .booking-policy-link:hover {
       text-decoration: underline;
     }
 
@@ -260,13 +262,37 @@
     .policy-copy p {
       margin: 0 0 16px;
     }
+
+    .policy-page-link-wrap {
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    .policy-page-link {
+      color: #f0d479;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .booking-policy {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.95rem;
+      margin-top: 16px;
+    }
+
+    .booking-policy-link {
+      color: #f0d479;
+      font-weight: 700;
+      text-decoration: none;
+    }
   </style>
 </head>
 
 <body>
   <div class="wrap">
 
-    <img src="./img/asheville_airport_express_logo.png" class="logo" />
+    <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
 
     <!-- DESCRIPTION -->
     <div class="card">
@@ -307,7 +333,7 @@
 
         <div class="detail-item">
           <div class="detail-title">
-            Asheville Airport Transfer 
+            Asheville Airport Transfer
             <span class="normal-weight">(Monday - Friday)</span>
           </div>
           <div class="detail-copy">
@@ -321,7 +347,7 @@
 
         <div class="detail-item">
           <div class="detail-title">Harrah’s Casino "Dusk til Dawn"
-           <span class="normal-weight">(Friday & Saturday)</span>
+            <span class="normal-weight">(Friday & Saturday)</span>
           </div>
           <div class="detail-copy">
             Round Trip - 6 Passengers (6pm - 6am) $375
@@ -334,20 +360,24 @@
       </div>
     </div>
 
-   <!-- CANCELLATION POLICY -->
-<div class="card skinny-card">
-  <div style="color:#fff; font-weight:700; margin-bottom:6px;">
-    Cancellation Policy
-  </div>
-  <a href="#" class="policy-trigger" data-modal-open="policy-modal">
-    Click Here for Details
-  </a>
-</div>
+    <!-- CANCELLATION POLICY -->
+    <div class="card skinny-card">
+      <div style="color:#fff; font-weight:700; margin-bottom:6px;">
+        Cancellation Policy
+      </div>
+      <a href="#" class="policy-trigger" data-modal-open="policy-modal">
+        Click Here for Details
+      </a>
+    </div>
 
     <!-- BOOK -->
     <div class="card center">
       <div class="section-title">Book Online</div>
       <iframe src="https://customer.moovs.app/airport-express-llc/iframe" class="widget"></iframe>
+      <div class="booking-policy">
+        By booking, you agree to our
+        <a href="policies.html" class="booking-policy-link">Cancellation and Service Policies</a>.
+      </div>
     </div>
 
   </div>
@@ -357,7 +387,7 @@
     <div class="modal-inner">
       <button class="modal-close" data-modal-close>&times;</button>
       <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank">
-        <img src="./img/flat_rate_transfer.png" class="modal-image">
+        <img src="./img/flat_rate_transfer.png" class="modal-image" alt="Asheville Airport Transfer Details">
       </a>
     </div>
   </div>
@@ -367,7 +397,7 @@
     <div class="modal-inner">
       <button class="modal-close" data-modal-close>&times;</button>
       <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank">
-        <img src="./img/dusk_til_dawn.png" class="modal-image">
+        <img src="./img/dusk_til_dawn.png" class="modal-image" alt="Harrah's Dusk til Dawn Details">
       </a>
     </div>
   </div>
@@ -392,6 +422,10 @@
           <strong>3. Cancellations Within 24 Hours of Scheduled Service</strong>
           Cancellations made within 24 hours of the scheduled pickup time are non-refundable.
         </p>
+      </div>
+
+      <div class="policy-page-link-wrap">
+        <a href="policies.html" class="policy-page-link">View Full Policy Page</a>
       </div>
     </div>
   </div>
