@@ -167,6 +167,23 @@
       border-radius: 16px;
     }
 
+    .skinny-card {
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .policy-trigger {
+      color: #f0d479;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.98rem;
+    }
+
+    .policy-trigger:hover,
+    .detail-link:hover {
+      text-decoration: underline;
+    }
+
     .modal {
       display: none;
       position: fixed;
@@ -208,6 +225,40 @@
       height: 42px;
       font-size: 1.3rem;
       cursor: pointer;
+    }
+
+    .policy-modal-inner {
+      position: relative;
+      width: min(96vw, 640px);
+      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 30px 24px 24px;
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+
+    .policy-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .policy-copy {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .policy-copy strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .policy-copy p {
+      margin: 0 0 16px;
     }
   </style>
 </head>
@@ -283,6 +334,13 @@
       </div>
     </div>
 
+    <!-- CANCELLATION POLICY -->
+    <div class="card skinny-card">
+      <a href="#" class="policy-trigger" data-modal-open="policy-modal">
+        Cancellation Policy Click Here for Details
+      </a>
+    </div>
+
     <!-- BOOK -->
     <div class="card center">
       <div class="section-title">Book Online</div>
@@ -308,6 +366,30 @@
       <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank">
         <img src="./img/dusk_til_dawn.png" class="modal-image">
       </a>
+    </div>
+  </div>
+
+  <!-- POLICY -->
+  <div class="modal" id="policy-modal">
+    <div class="policy-modal-inner">
+      <button class="modal-close" data-modal-close>&times;</button>
+      <div class="policy-title">Cancellation Policy</div>
+      <div class="policy-copy">
+        <p>
+          <strong>1. 24-Hour Risk-Free Cancellation</strong>
+          Customers may cancel their booking within 24 hours of the original reservation time and receive a full refund, provided the scheduled trip is more than 24 hours away at the time of booking. If the trip is scheduled to occur within 24 hours of booking, the reservation is non-refundable.
+        </p>
+
+        <p>
+          <strong>2. Cancellations More Than 24 Hours Before Scheduled Service</strong>
+          Cancellations made more than 24 hours prior to the scheduled pickup time are eligible for a 50% refund.
+        </p>
+
+        <p>
+          <strong>3. Cancellations Within 24 Hours of Scheduled Service</strong>
+          Cancellations made within 24 hours of the scheduled pickup time are non-refundable.
+        </p>
+      </div>
     </div>
   </div>
 
