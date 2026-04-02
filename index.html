@@ -131,6 +131,34 @@
       display: block;
     }
 
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 6px 12px;
+      align-items: center;
+    }
+
+    .hours-heading {
+      grid-column: 1 / -1;
+      color: #fff;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .hours-heading.spaced {
+      margin-top: 16px;
+    }
+
+    .hours-day {
+      color: var(--muted);
+    }
+
+    .hours-time {
+      color: var(--muted);
+      text-align: right;
+      white-space: nowrap;
+    }
+
     .details-list {
       display: grid;
       gap: 14px;
@@ -320,16 +348,28 @@
     <!-- HOURS + RATES -->
     <div class="card">
       <div class="section-title">Hours</div>
-      <div class="list">
-        <div class="highlight">Dispatch Hours</div>
-        Monday – Friday : 9:00 AM – 5:00 PM<br>
-        Saturday        : 10:00 AM – 2:00 PM<br>
-        Sunday          : Closed
-        <br><br>
-        <div class="highlight">Pickup Hours</div>
-        Monday – Friday : 4:00 AM – 4:00 PM<br>
-        Saturday        : 8:00 AM – 8:00 PM<br>
-        Sunday          : Closed
+      <div class="list hours-grid">
+        <div class="hours-heading">Dispatch Hours</div>
+
+        <div class="hours-day">Monday – Friday</div>
+        <div class="hours-time">9:00 AM – 5:00 PM</div>
+
+        <div class="hours-day">Saturday</div>
+        <div class="hours-time">10:00 AM – 2:00 PM</div>
+
+        <div class="hours-day">Sunday</div>
+        <div class="hours-time">Closed</div>
+
+        <div class="hours-heading spaced">Pickup Hours</div>
+
+        <div class="hours-day">Monday – Friday</div>
+        <div class="hours-time">4:00 AM – 4:00 PM</div>
+
+        <div class="hours-day">Saturday</div>
+        <div class="hours-time">8:00 AM – 8:00 PM</div>
+
+        <div class="hours-day">Sunday</div>
+        <div class="hours-time">Closed</div>
       </div>
 
       <div class="section-title">Rates</div>
