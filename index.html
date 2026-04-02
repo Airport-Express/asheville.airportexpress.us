@@ -131,6 +131,22 @@
       display: block;
     }
 
+    .inner-panel {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px;
+      margin-top: 10px;
+    }
+
+    .inner-panel .section-title {
+      margin-top: 10px;
+    }
+
+    .inner-panel .section-title:first-child {
+      margin-top: 0;
+    }
+
     .hours-grid {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -348,42 +364,46 @@
     <!-- HOURS + RATES -->
     <div class="card">
       <div class="section-title">Hours</div>
-      <div class="list hours-grid">
-        <div class="hours-heading">Dispatch Hours</div>
 
-        <div class="hours-day">Monday – Friday</div>
-        <div class="hours-time">9:00 AM – 5:00 PM</div>
+      <div class="inner-panel">
+        <div class="list hours-grid">
+          <div class="hours-heading">Dispatch Hours</div>
 
-        <div class="hours-day">Saturday</div>
-        <div class="hours-time">10:00 AM – 2:00 PM</div>
+          <div class="hours-day">Monday – Friday</div>
+          <div class="hours-time">9:00 AM – 5:00 PM</div>
 
-        <div class="hours-day">Sunday</div>
-        <div class="hours-time">Closed</div>
+          <div class="hours-day">Saturday</div>
+          <div class="hours-time">10:00 AM – 2:00 PM</div>
 
-        <div class="hours-heading spaced">Pickup Hours</div>
+          <div class="hours-day">Sunday</div>
+          <div class="hours-time">Closed</div>
 
-        <div class="hours-day">Monday – Friday</div>
-        <div class="hours-time">4:00 AM – 4:00 PM</div>
+          <div class="hours-heading spaced">Pickup Hours</div>
 
-        <div class="hours-day">Saturday</div>
-        <div class="hours-time">8:00 AM – 8:00 PM</div>
+          <div class="hours-day">Monday – Friday</div>
+          <div class="hours-time">4:00 AM – 4:00 PM</div>
 
-        <div class="hours-day">Sunday</div>
-        <div class="hours-time">Closed</div>
-      </div>
+          <div class="hours-day">Saturday</div>
+          <div class="hours-time">8:00 AM – 8:00 PM</div>
 
-      <div class="section-title">Rates</div>
-      <div class="list">
-        <div class="highlight">Weekday Rates</div>
-        $2.60 per mile
-        <span class="note">*$65 Minimum</span>
+          <div class="hours-day">Sunday</div>
+          <div class="hours-time">Closed</div>
+        </div>
 
-        <br>
+        <div class="section-title" style="margin-top:18px;">Rates</div>
 
-        <div class="highlight">Weekend Rates</div>
-        $3.00 per mile
-        <span class="note">*$75 Minimum</span>
-        <span class="note">+$10 Flat Rates</span>
+        <div class="list" style="margin-bottom:0;">
+          <div class="highlight">Weekday Rates</div>
+          $2.60 per mile
+          <span class="note">*$65 Minimum</span>
+
+          <br>
+
+          <div class="highlight">Weekend Rates</div>
+          $3.00 per mile
+          <span class="note">*$75 Minimum</span>
+          <span class="note">+$10 Flat Rates</span>
+        </div>
       </div>
     </div>
 
