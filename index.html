@@ -225,6 +225,39 @@
       display: block;
     }
 
+    .booking-response-box {
+      margin-top: 18px;
+      padding: 16px 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      text-align: left;
+    }
+
+    .booking-response-title {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .booking-response-note {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .booking-response-note p {
+      margin: 0 0 10px;
+    }
+
+    .booking-response-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .booking-response-note strong {
+      color: #fff;
+    }
+
     .skinny-card {
       padding: 14px 20px;
       text-align: center;
@@ -469,6 +502,16 @@
     <div class="card center">
       <div class="section-title">Book Online</div>
       <iframe src="https://customer.moovs.app/airport-express-llc/iframe" class="widget"></iframe>
+
+      <div class="booking-response-box">
+        <div class="booking-response-title">Booking Confirmation</div>
+        <div class="booking-response-note">
+          <p><strong>During dispatch hours:</strong> Booking requests are typically confirmed within 1 hour.</p>
+          <p><strong>For immediate assistance:</strong> Please call or text.</p>
+          <p><strong>Outside dispatch hours:</strong> Requests are reviewed and confirmed the next business morning.</p>
+        </div>
+      </div>
+
       <div class="booking-policy">
         By booking, you agree to our
         <a href="policies.html" class="booking-policy-link">Service Policies</a>.
