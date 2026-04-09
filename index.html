@@ -60,13 +60,6 @@
   </script>
 
   <style>
-
-  <meta
-    name="description"
-    content="Asheville Airport Express - Reliable airport transportation based in Asheville North Carolina."
-  />
-
-  <style>
     :root {
       --bg: #0b1220;
       --panel: #111a2b;
@@ -106,6 +99,13 @@
       margin: 0 auto 26px;
       display: block;
       border-radius: 20px;
+    }
+
+    .page-title {
+      font-size: 1.8rem;
+      line-height: 1.2;
+      margin: 0 0 18px;
+      text-align: center;
     }
 
     .card {
@@ -418,6 +418,20 @@
       text-decoration: none;
     }
 
+    .seo-copy {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .seo-copy p {
+      margin: 0 0 14px;
+    }
+
+    .seo-copy p:last-child {
+      margin-bottom: 0;
+    }
+
     @media (max-width: 640px) {
       body {
         padding: 16px;
@@ -430,6 +444,10 @@
       .widget {
         height: 1040px;
       }
+
+      .page-title {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -437,14 +455,20 @@
 <body>
   <div class="wrap">
 
-    <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
+    <img
+      src="./img/asheville_airport_express_logo.png"
+      class="logo"
+      alt="Asheville Airport Express logo for private airport transportation in Asheville NC"
+    />
+
+    <h1 class="page-title">Asheville Airport Transportation</h1>
 
     <!-- DESCRIPTION -->
     <div class="card">
       <div class="description">
-        Asheville Airport Express is a professional airport transportation service based in Asheville North Carolina.
+        Asheville Airport Express provides private airport transportation in Asheville, North Carolina, with reliable service to and from Asheville Regional Airport (AVL).
         <br><br>
-        We offer premium vehicles with comfortable, all-leather interiors, delivering punctual, stress-free airport rides with dependable service.
+        We offer premium vehicles with comfortable all-leather interiors, punctual pickups, and stress-free airport rides for local residents and visitors.
       </div>
 
       <div class="call-label"><strong>Call / Text</strong></div>
@@ -459,22 +483,22 @@
         <div class="list hours-grid">
           <div class="hours-heading">Dispatch Hours</div>
 
-          <div class="hours-day">Monday – Friday</div>
-          <div class="hours-time">9:00 AM – 5:00 PM</div>
+          <div class="hours-day">Monday - Friday</div>
+          <div class="hours-time">9:00 AM - 5:00 PM</div>
 
           <div class="hours-day">Saturday</div>
-          <div class="hours-time">10:00 AM – 2:00 PM</div>
+          <div class="hours-time">10:00 AM - 2:00 PM</div>
 
           <div class="hours-day">Sunday</div>
-          <div class="hours-time">10:00 AM – 2:00 PM</div>
+          <div class="hours-time">10:00 AM - 2:00 PM</div>
 
           <div class="hours-heading spaced">Pickup Hours</div>
 
-          <div class="hours-day">Monday – Friday</div>
-          <div class="hours-time">4:00 AM – 8:00 PM</div>
+          <div class="hours-day">Monday - Friday</div>
+          <div class="hours-time">4:00 AM - 8:00 PM</div>
 
           <div class="hours-day">Saturday & Sunday</div>
-          <div class="hours-time">4:00 AM – 8:00 PM</div>
+          <div class="hours-time">4:00 AM - 8:00 PM</div>
         </div>
       </div>
 
@@ -487,11 +511,11 @@
             $2.50 per mile
             <span class="note">Minimum $65</span>
 
-          <div style="height:8px;"></div>
+            <div style="height:8px;"></div>
 
             <div class="highlight">Premium Service Hours</div>
             <div class="detail-copy">
-              <div>Early Hours Service (4am – 8am): <strong>+30%</strong></div>
+              <div>Early Hours Service (4am - 8am): <strong>+30%</strong></div>
               <div>Weekend Service: <strong>+15%</strong></div>
             </div>
           </div>
@@ -499,7 +523,7 @@
       </div>
     </div>
 
-    <!-- IMAGE DETAILS -->
+    <!-- FLAT RATE DETAILS -->
     <div class="card">
       <div class="section-title">Flat Rate Details</div>
 
@@ -516,7 +540,23 @@
           <a href="#" class="detail-link" data-modal-open="avl-modal">
             Click here for details
           </a>
-       </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEO CONTENT -->
+    <div class="card">
+      <div class="section-title">Private Airport Rides to AVL</div>
+      <div class="seo-copy">
+        <p>
+          Asheville Airport Express offers private airport rides in Asheville, NC for travelers looking for dependable service to and from Asheville Regional Airport.
+        </p>
+        <p>
+          Whether you need airport transportation from Asheville, Arden, Fletcher, or nearby areas, we provide a professional alternative to standard airport shuttles, taxis, and app-based rides.
+        </p>
+        <p>
+          Our service is designed for passengers who want reliable airport transportation, clear pricing, and a comfortable ride to AVL.
+        </p>
       </div>
     </div>
 
@@ -533,7 +573,11 @@
     <!-- BOOK -->
     <div class="card center">
       <div class="section-title">Book Online</div>
-      <iframe src="https://customer.moovs.app/airport-express-llc/iframe" class="widget"></iframe>
+      <iframe
+        src="https://customer.moovs.app/airport-express-llc/iframe"
+        class="widget"
+        title="Book Asheville Airport Express online"
+      ></iframe>
 
       <div class="booking-response-box">
         <div class="booking-response-title">Booking Confirmation</div>
@@ -555,9 +599,13 @@
   <!-- AVL -->
   <div class="modal" id="avl-modal">
     <div class="modal-inner">
-      <button class="modal-close" data-modal-close>&times;</button>
-      <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank">
-        <img src="./img/flat_rate_transfer.png" class="modal-image" alt="Asheville Airport Transfer Details">
+      <button class="modal-close" data-modal-close aria-label="Close modal">&times;</button>
+      <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank" rel="noopener noreferrer">
+        <img
+          src="./img/flat_rate_transfer.png"
+          class="modal-image"
+          alt="Asheville Airport Express flat rate airport transfer details"
+        >
       </a>
     </div>
   </div>
@@ -565,9 +613,13 @@
   <!-- HARRAHS -->
   <div class="modal" id="harrahs-modal">
     <div class="modal-inner">
-      <button class="modal-close" data-modal-close>&times;</button>
-      <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank">
-        <img src="./img/dusk_til_dawn.png" class="modal-image" alt="Harrah's Dusk til Dawn Details">
+      <button class="modal-close" data-modal-close aria-label="Close modal">&times;</button>
+      <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank" rel="noopener noreferrer">
+        <img
+          src="./img/dusk_til_dawn.png"
+          class="modal-image"
+          alt="Harrah's dusk til dawn transportation details"
+        >
       </a>
     </div>
   </div>
@@ -575,7 +627,7 @@
   <!-- POLICY -->
   <div class="modal" id="policy-modal">
     <div class="policy-modal-inner">
-      <button class="modal-close" data-modal-close>&times;</button>
+      <button class="modal-close" data-modal-close aria-label="Close modal">&times;</button>
       <div class="policy-title">Cancellation Policy</div>
       <div class="policy-copy">
         <p>
