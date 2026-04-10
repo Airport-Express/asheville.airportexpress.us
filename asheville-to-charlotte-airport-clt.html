@@ -272,7 +272,7 @@
 
     .nav-links a {
       flex: 1;
-      padding: 8px 6px;
+      padding: 8px 4px;
       border-radius: 10px;
       background: rgba(255,255,255,0.03);
       border: 1px solid var(--line);
@@ -280,17 +280,13 @@
       text-decoration: none;
       font-weight: 600;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.82rem;
+      line-height: 1.1;
       transition: 0.2s ease;
       white-space: nowrap;
     }
 
     .nav-links a:hover {
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.15);
-    }
-
-    .nav-links a.active {
       background: rgba(255,255,255,0.08);
       border-color: rgba(255,255,255,0.15);
     }
@@ -369,15 +365,15 @@
 
     .modal.open { display: flex; }
 
-    .modal-inner {
+    .policy-modal-inner {
       position: relative;
-      width: min(96vw, 1200px);
-    }
-
-    .modal-image {
-      width: 100%;
-      display: block;
-      cursor: pointer;
+      width: min(96vw, 640px);
+      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 30px 24px 24px;
+      box-shadow: var(--shadow);
+      text-align: left;
     }
 
     .modal-close {
@@ -392,17 +388,6 @@
       height: 42px;
       font-size: 1.3rem;
       cursor: pointer;
-    }
-
-    .policy-modal-inner {
-      position: relative;
-      width: min(96vw, 640px);
-      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 30px 24px 24px;
-      box-shadow: var(--shadow);
-      text-align: left;
     }
 
     .policy-title {
@@ -464,6 +449,11 @@
       .widget {
         height: 1040px;
       }
+
+      .nav-links a {
+        font-size: 0.78rem;
+        padding: 8px 3px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -473,6 +463,7 @@
 
       .nav-links a {
         flex: 1 1 calc(50% - 6px);
+        white-space: normal;
       }
     }
   </style>
@@ -488,10 +479,10 @@
     <!-- NAVIGATION -->
     <div class="card center">
       <div class="nav-links">
+        <a href="/index.html" title="Home">Home</a>
         <a href="/asheville-airport-transportation-avl.html" title="Asheville Airport Transportation AVL">AVL Airport</a>
-        <a href="/asheville-to-charlotte-airport-clt.html" class="active" title="Asheville to Charlotte Airport Transportation">AVL to CLT</a>
         <a href="/asheville-to-greenville-airport-gsp.html" title="Asheville to Greenville Airport Transportation">AVL to GSP</a>
-        <a href="/vehicles.html" title="Our Vehicles">Our Vehicles</a>
+        <a href="/vehicles.html" title="Our Vehicles">Vehicles</a>
       </div>
     </div>
 
