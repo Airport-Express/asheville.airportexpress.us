@@ -210,10 +210,6 @@
       margin-top: 2px;
     }
 
-    .hours-heading.spaced {
-      margin-top: 16px;
-    }
-
     .hours-day {
       color: var(--muted);
     }
@@ -263,6 +259,11 @@
       text-decoration: none;
     }
 
+    .detail-link:hover,
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
     .nav-links {
       display: flex;
       gap: 8px;
@@ -291,152 +292,6 @@
       border-color: rgba(255,255,255,0.15);
     }
 
-    .widget {
-      width: 100%;
-      height: 980px;
-      border: none;
-      border-radius: 16px;
-      overflow: hidden;
-      display: block;
-    }
-
-    .booking-response-box {
-      margin-top: 18px;
-      padding: 16px 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      text-align: left;
-    }
-
-    .booking-response-title {
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .booking-response-note {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 0.95rem;
-    }
-
-    .booking-response-note p {
-      margin: 0 0 10px;
-    }
-
-    .booking-response-note p:last-child {
-      margin-bottom: 0;
-    }
-
-    .booking-response-note strong {
-      color: #fff;
-    }
-
-    .skinny-card {
-      padding: 14px 20px;
-      text-align: center;
-    }
-
-    .policy-trigger {
-      color: #f0d479;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 0.98rem;
-    }
-
-    .policy-trigger:hover,
-    .detail-link:hover,
-    .policy-page-link:hover,
-    .booking-policy-link:hover {
-      text-decoration: underline;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0,0,0,0.82);
-      padding: 24px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal.open { display: flex; }
-
-    .policy-modal-inner {
-      position: relative;
-      width: min(96vw, 640px);
-      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 30px 24px 24px;
-      box-shadow: var(--shadow);
-      text-align: left;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(0,0,0,0.75);
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      width: 42px;
-      height: 42px;
-      font-size: 1.3rem;
-      cursor: pointer;
-    }
-
-    .policy-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-      color: #fff;
-    }
-
-    .policy-copy {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 1rem;
-    }
-
-    .policy-copy strong {
-      color: #fff;
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .policy-copy p {
-      margin: 0 0 16px;
-    }
-
-    .policy-page-link-wrap {
-      margin-top: 18px;
-      text-align: center;
-    }
-
-    .policy-page-link {
-      color: #f0d479;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .booking-policy {
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 0.95rem;
-      margin-top: 16px;
-    }
-
-    .booking-policy-link {
-      color: #f0d479;
-      font-weight: 700;
-      text-decoration: none;
-    }
-
     @media (max-width: 640px) {
       body {
         padding: 16px;
@@ -444,10 +299,6 @@
 
       .card {
         padding: 24px 18px 20px;
-      }
-
-      .widget {
-        height: 1040px;
       }
 
       .nav-links a {
@@ -564,86 +415,7 @@
       </div>
     </div>
 
-    <!-- CANCELLATION POLICY -->
-    <div class="card skinny-card">
-      <div style="color:#fff; font-weight:700; margin-bottom:6px;">
-        Cancellation Policy
-      </div>
-      <a href="#" class="policy-trigger" data-modal-open="policy-modal">
-        Click Here for Details
-      </a>
-    </div>
-
-    <!-- BOOK -->
-    <div class="card center">
-      <div class="section-title">Book Online</div>
-      <iframe src="https://customer.moovs.app/airport-express-llc/iframe" class="widget"></iframe>
-
-      <div class="booking-response-box">
-        <div class="booking-response-title">Booking Confirmation</div>
-        <div class="booking-response-note">
-          <p><strong>GSP service:</strong> Greenville airport trips are reviewed based on availability before confirmation.</p>
-          <p><strong>Pickup window:</strong> Scheduled service between 8:00 AM and 4:00 PM.</p>
-          <p><strong>For immediate assistance:</strong> Please call or text.</p>
-        </div>
-      </div>
-
-      <div class="booking-policy">
-        By booking, you agree to our
-        <a href="/policies.html" class="booking-policy-link">Service Policies</a>.
-      </div>
-    </div>
-
   </div>
-
-  <!-- POLICY -->
-  <div class="modal" id="policy-modal">
-    <div class="policy-modal-inner">
-      <button class="modal-close" data-modal-close>&times;</button>
-      <div class="policy-title">Cancellation Policy</div>
-      <div class="policy-copy">
-        <p>
-          <strong>1. 24-Hour Risk-Free Cancellation</strong>
-          Customers may cancel their booking within 24 hours of the original reservation time and receive a full refund, provided the scheduled trip is more than 24 hours away at the time of booking. If the trip is scheduled to occur within 24 hours of booking, the reservation is non-refundable.
-        </p>
-
-        <p>
-          <strong>2. Cancellations More Than 24 Hours Before Scheduled Service</strong>
-          Cancellations made more than 24 hours prior to the scheduled pickup time are eligible for a 50% refund.
-        </p>
-
-        <p>
-          <strong>3. Cancellations Within 24 Hours of Scheduled Service</strong>
-          Cancellations made within 24 hours of the scheduled pickup time are non-refundable.
-        </p>
-      </div>
-
-      <div class="policy-page-link-wrap">
-        <a href="/policies.html" class="policy-page-link">View Full Policy Page</a>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    document.querySelectorAll('[data-modal-open]').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        document.getElementById(link.dataset.modalOpen).classList.add('open');
-      });
-    });
-
-    document.querySelectorAll('[data-modal-close]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.closest('.modal').classList.remove('open');
-      });
-    });
-
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.addEventListener('click', e => {
-        if (e.target === modal) modal.classList.remove('open');
-      });
-    });
-  </script>
 
 </body>
 </html>
