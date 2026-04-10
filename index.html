@@ -247,6 +247,31 @@
       text-decoration: none;
     }
 
+    .nav-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .nav-links a {
+      display: block;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+    }
+
     .widget {
       width: 100%;
       height: 980px;
@@ -416,6 +441,10 @@
       .widget {
         height: 1040px;
       }
+
+      .nav-links {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
@@ -424,6 +453,23 @@
   <div class="wrap">
 
     <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
+
+    <!-- NAVIGATION -->
+    <div class="card center">
+      <div class="nav-links">
+        <a href="/ride-to-asheville-airport-avl.html" title="Ride to Asheville Airport AVL">AVL Airport</a>
+
+        <a href="/asheville-to-charlotte-airport-clt.html" title="Asheville to Charlotte Airport Transportation">
+          AVL to CLT
+        </a>
+
+        <a href="/asheville-to-greenville-airport-gsp.html" title="Asheville to Greenville Airport Transportation">
+          AVL to GSP
+        </a>
+
+        <a href="/vehicles.html" title="Our Vehicles">Our Vehicles</a>
+      </div>
+    </div>
 
     <!-- DESCRIPTION -->
     <div class="card">
@@ -502,7 +548,7 @@
           <a href="#" class="detail-link" data-modal-open="avl-modal">
             Click here for details
           </a>
-       </div>
+        </div>
       </div>
     </div>
 
