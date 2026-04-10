@@ -115,14 +115,6 @@
 
     .card.center { text-align: center; }
 
-    .page-title {
-      color: #fff;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin: 0 0 10px;
-      text-align: center;
-    }
-
     .description {
       color: var(--muted);
       line-height: 1.7;
@@ -161,6 +153,14 @@
       font-weight: 700;
     }
 
+    .page-title {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 12px;
+      text-align: center;
+    }
+
     .list {
       color: var(--muted);
       line-height: 1.6;
@@ -186,6 +186,14 @@
       padding: 18px 16px;
       margin-top: 10px;
       overflow: hidden;
+    }
+
+    .inner-panel .section-title {
+      margin-top: 10px;
+    }
+
+    .inner-panel .section-title:first-child {
+      margin-top: 0;
     }
 
     .hours-grid {
@@ -255,13 +263,6 @@
       text-decoration: none;
     }
 
-    .detail-link:hover,
-    .policy-page-link:hover,
-    .booking-policy-link:hover,
-    .nav-links a:hover {
-      text-decoration: underline;
-    }
-
     .nav-links {
       display: flex;
       gap: 8px;
@@ -284,9 +285,14 @@
       white-space: nowrap;
     }
 
+    .nav-links a:hover {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.15);
+    }
+
     .nav-links a.active {
       background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.16);
+      border-color: rgba(255,255,255,0.15);
     }
 
     .widget {
@@ -333,6 +339,97 @@
 
     .skinny-card {
       padding: 14px 20px;
+      text-align: center;
+    }
+
+    .policy-trigger {
+      color: #f0d479;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.98rem;
+    }
+
+    .policy-trigger:hover,
+    .detail-link:hover,
+    .policy-page-link:hover,
+    .booking-policy-link:hover {
+      text-decoration: underline;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.82);
+      padding: 24px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.open { display: flex; }
+
+    .modal-inner {
+      position: relative;
+      width: min(96vw, 1200px);
+    }
+
+    .modal-image {
+      width: 100%;
+      display: block;
+      cursor: pointer;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      width: 42px;
+      height: 42px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .policy-modal-inner {
+      position: relative;
+      width: min(96vw, 640px);
+      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 30px 24px 24px;
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+
+    .policy-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #fff;
+    }
+
+    .policy-copy {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .policy-copy strong {
+      color: #fff;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .policy-copy p {
+      margin: 0 0 16px;
+    }
+
+    .policy-page-link-wrap {
+      margin-top: 18px;
       text-align: center;
     }
 
@@ -402,16 +499,18 @@
     <div class="card">
       <h1 class="page-title">Asheville to Charlotte Airport Transportation</h1>
       <div class="description">
-        Asheville Airport Express provides private airport transportation from Asheville to Charlotte Douglas International Airport (CLT). Our long-distance airport car service offers a reliable alternative to standard airport shuttle and airport taxi options for travelers heading to Charlotte.
+        Asheville Airport Express provides private airport transportation from Asheville to Charlotte Douglas International Airport (CLT).
         <br><br>
-        Flat-rate CLT service is $325 total for up to 4 passengers and includes space for 4 large checked bags and 4 carry-on bags.
+        Our long-distance airport car service offers a reliable alternative to standard airport shuttle and airport taxi options for travelers heading to Charlotte.
+        <br><br>
+        Flat-rate CLT service is <strong>$325 total</strong> for up to 4 passengers and includes space for 4 large checked bags and 4 carry-on bags.
       </div>
 
       <div class="call-label"><strong>Call / Text</strong></div>
       <a href="tel:+18283977377" class="call-btn">828-397-7377</a>
     </div>
 
-    <!-- AVAILABILITY + RATE -->
+    <!-- AVAILABILITY + FLAT RATE -->
     <div class="card">
       <div class="section-title">Availability</div>
 
@@ -428,7 +527,7 @@
           <div class="hours-day">Same-Day Requests</div>
           <div class="hours-time">Subject to Availability</div>
 
-          <div class="hours-day">Late-Night / Recovery Protection</div>
+          <div class="hours-day">Late / Extended Scheduling</div>
           <div class="hours-time">Approved Schedule Only</div>
         </div>
       </div>
@@ -454,7 +553,7 @@
       </div>
     </div>
 
-    <!-- CLT DETAILS -->
+    <!-- SERVICE DETAILS -->
     <div class="card">
       <div class="section-title">Charlotte Airport Service</div>
 
@@ -472,6 +571,16 @@
           </a>
         </div>
       </div>
+    </div>
+
+    <!-- CANCELLATION POLICY -->
+    <div class="card skinny-card">
+      <div style="color:#fff; font-weight:700; margin-bottom:6px;">
+        Cancellation Policy
+      </div>
+      <a href="#" class="policy-trigger" data-modal-open="policy-modal">
+        Click Here for Details
+      </a>
     </div>
 
     <!-- BOOK -->
@@ -494,17 +603,56 @@
       </div>
     </div>
 
-    <!-- QUICK INFO -->
-    <div class="card skinny-card">
-      <div style="color:#fff; font-weight:700; margin-bottom:6px;">
-        Charlotte Douglas International Airport (CLT)
-      </div>
-      <a href="/index.html" class="policy-page-link">
-        View Main Service Page
-      </a>
-    </div>
-
   </div>
+
+  <!-- POLICY -->
+  <div class="modal" id="policy-modal">
+    <div class="policy-modal-inner">
+      <button class="modal-close" data-modal-close>&times;</button>
+      <div class="policy-title">Cancellation Policy</div>
+      <div class="policy-copy">
+        <p>
+          <strong>1. 24-Hour Risk-Free Cancellation</strong>
+          Customers may cancel their booking within 24 hours of the original reservation time and receive a full refund, provided the scheduled trip is more than 24 hours away at the time of booking. If the trip is scheduled to occur within 24 hours of booking, the reservation is non-refundable.
+        </p>
+
+        <p>
+          <strong>2. Cancellations More Than 24 Hours Before Scheduled Service</strong>
+          Cancellations made more than 24 hours prior to the scheduled pickup time are eligible for a 50% refund.
+        </p>
+
+        <p>
+          <strong>3. Cancellations Within 24 Hours of Scheduled Service</strong>
+          Cancellations made within 24 hours of the scheduled pickup time are non-refundable.
+        </p>
+      </div>
+
+      <div class="policy-page-link-wrap">
+        <a href="/policies.html" class="policy-page-link">View Full Policy Page</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('[data-modal-open]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.getElementById(link.dataset.modalOpen).classList.add('open');
+      });
+    });
+
+    document.querySelectorAll('[data-modal-close]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.closest('.modal').classList.remove('open');
+      });
+    });
+
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', e => {
+        if (e.target === modal) modal.classList.remove('open');
+      });
+    });
+  </script>
 
 </body>
 </html>
