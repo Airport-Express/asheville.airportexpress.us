@@ -144,46 +144,41 @@
     }
 
     .after-hours-text {
-      margin-top: 14px;
-      text-align: center;
+      margin-top: 16px;
+      max-width: 340px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
       color: var(--muted);
-      line-height: 1.5;
+      line-height: 1.6;
       font-size: 0.98rem;
     }
 
-    .after-hours-text .text-label {
-      color: #ffffff;
-      font-weight: 700;
+    .after-hours-text .text-line {
       display: block;
-      margin-top: 2px;
+      margin-top: 4px;
     }
 
-    .after-hours-text .text-number {
-      color: var(--accent);
+    .after-hours-text a {
+      color: inherit;
       text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      margin-top: 2px;
       outline: none;
       box-shadow: none;
-      border: none;
       -webkit-tap-highlight-color: transparent;
     }
 
-    .after-hours-text .text-number:hover {
-      color: var(--accent-hover);
+    .after-hours-text a:hover,
+    .after-hours-text a:focus,
+    .after-hours-text a:active,
+    .after-hours-text a:visited {
+      color: inherit;
       text-decoration: none;
       outline: none;
       box-shadow: none;
     }
 
-    .after-hours-text .text-number:focus,
-    .after-hours-text .text-number:active,
-    .after-hours-text .text-number:visited {
-      color: var(--accent);
-      text-decoration: none;
-      outline: none;
-      box-shadow: none;
+    .text-number {
+      font-weight: 700;
     }
 
     .section-title {
@@ -529,11 +524,12 @@
 </div>
 
       <div class="call-label"><strong>Call / Text</strong></div>
-      <a href="tel:+18283977377" class="call-btn">(828) 397-7377</a>
-       <div class="after-hours-text">
-    Need immediate assistance outside dispatch hours?<br>
-    Text <a href="sms:7273977377">(727) 397-7377</a>
-     </div>
+      <a href="tel:+18283977377" class="call-btn">828-397-7377</a>
+
+      <div class="after-hours-text">
+        Need immediate assistance outside dispatch hours?<br>
+        <span class="text-line">Text <a href="sms:7273977377" class="text-number">(727) 397-7377</a></span>
+      </div>
     </div>
 
     <!-- HOURS + RATES -->
