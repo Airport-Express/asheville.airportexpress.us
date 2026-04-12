@@ -145,7 +145,7 @@
 
     .after-hours-text {
       margin-top: 16px;
-      max-width: 340px;
+      max-width: 420px;
       margin-left: auto;
       margin-right: auto;
       text-align: left;
@@ -154,31 +154,33 @@
       font-size: 0.98rem;
     }
 
-    .after-hours-text .text-line {
+    .question-line {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .text-line {
       display: block;
       margin-top: 4px;
     }
 
-    .after-hours-text a {
+    .text-number {
       color: inherit;
+      font-weight: 700;
       text-decoration: none;
       outline: none;
       box-shadow: none;
       -webkit-tap-highlight-color: transparent;
     }
 
-    .after-hours-text a:hover,
-    .after-hours-text a:focus,
-    .after-hours-text a:active,
-    .after-hours-text a:visited {
+    .text-number:hover,
+    .text-number:focus,
+    .text-number:active,
+    .text-number:visited {
       color: inherit;
       text-decoration: none;
       outline: none;
       box-shadow: none;
-    }
-
-    .text-number {
-      font-weight: 700;
     }
 
     .section-title {
@@ -496,6 +498,12 @@
         flex: 1 1 calc(50% - 6px);
       }
     }
+
+    @media (max-width: 420px) {
+      .question-line {
+        white-space: normal;
+      }
+    }
   </style>
 </head>
 
@@ -516,18 +524,18 @@
 
     <!-- DESCRIPTION -->
     <div class="card">
-    <div class="description">
-  Asheville Airport Express provides professional airport transportation and airport shuttle service serving Asheville Regional Airport (AVL) and the surrounding Western North Carolina region. We offer reliable airport transfers, private car service, and airport pickup service for individuals and small groups.
-  <br><br>
-  Our premium vehicles feature comfortable, all-leather interiors, delivering a clean and dependable airport ride service designed for punctual, stress-free travel. Whether you need a ride to the airport, airport pickup, or scheduled airport transportation service, we provide consistent flat-rate pricing with a focus on professionalism and on-time performance.
-  <br><br>
-</div>
+      <div class="description">
+        Asheville Airport Express provides professional airport transportation and airport shuttle service serving Asheville Regional Airport (AVL) and the surrounding Western North Carolina region. We offer reliable airport transfers, private car service, and airport pickup service for individuals and small groups.
+        <br><br>
+        Our premium vehicles feature comfortable, all-leather interiors, delivering a clean and dependable airport ride service designed for punctual, stress-free travel. Whether you need a ride to the airport, airport pickup, or scheduled airport transportation service, we provide consistent flat-rate pricing with a focus on professionalism and on-time performance.
+        <br><br>
+      </div>
 
       <div class="call-label"><strong>Call / Text</strong></div>
       <a href="tel:+18283977377" class="call-btn">828-397-7377</a>
 
       <div class="after-hours-text">
-        Need immediate assistance outside dispatch hours?<br>
+        <span class="question-line">Need immediate assistance outside dispatch hours?</span>
         <span class="text-line">Text <a href="sms:7273977377" class="text-number">(727) 397-7377</a></span>
       </div>
     </div>
