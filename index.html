@@ -9,7 +9,7 @@
     name="description"
     content="Private airport transportation in Asheville, NC. Reliable rides to and from AVL with flat rates, early morning pickup options, and premium vehicles."
   />
-  <link rel="canonical" href="https://ashevilleairportexpress.com/" />
+  <link rel="canonical" href="https://asheville.airportexpress.us/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Asheville Airport Express - Airport Transportation in Asheville, NC (AVL)" />
@@ -17,8 +17,8 @@
     property="og:description"
     content="Private airport transportation in Asheville, NC with reliable service to and from AVL."
   />
-  <meta property="og:url" content="https://ashevilleairportexpress.com/" />
-  <meta property="og:image" content="https://ashevilleairportexpress.com/img/asheville_airport_express_logo.png" />
+  <meta property="og:url" content="https://asheville.airportexpress.us/" />
+  <meta property="og:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Asheville Airport Express - Airport Transportation in Asheville, NC (AVL)" />
@@ -26,14 +26,14 @@
     name="twitter:description"
     content="Private airport transportation in Asheville, NC with reliable service to and from AVL."
   />
-  <meta name="twitter:image" content="https://ashevilleairportexpress.com/img/asheville_airport_express_logo.png" />
+  <meta name="twitter:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TaxiService",
     "name": "Asheville Airport Express",
-    "url": "https://ashevilleairportexpress.com/",
+    "url": "https://asheville.airportexpress.us/",
     "telephone": "+1-828-397-7377",
     "areaServed": "Asheville, NC",
     "serviceType": [
@@ -318,13 +318,32 @@
       border-color: rgba(255,255,255,0.15);
     }
 
-    .widget {
+    .booking-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .book-btn {
+      display: inline-block;
       width: 100%;
-      height: 980px;
+      max-width: 320px;
+      padding: 16px 20px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #000;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      text-align: center;
+      transition: 0.2s ease;
       border: none;
-      border-radius: 16px;
-      overflow: hidden;
-      display: block;
+      cursor: pointer;
+    }
+
+    .book-btn:hover {
+      background: var(--accent-hover);
     }
 
     .booking-response-box {
@@ -334,6 +353,7 @@
       border: 1px solid var(--line);
       border-radius: 16px;
       text-align: left;
+      width: 100%;
     }
 
     .booking-response-title {
@@ -415,6 +435,7 @@
       height: 42px;
       font-size: 1.3rem;
       cursor: pointer;
+      z-index: 2;
     }
 
     .policy-modal-inner {
@@ -475,6 +496,25 @@
       text-decoration: none;
     }
 
+    .booking-widget-modal .modal-inner {
+      width: min(96vw, 980px);
+      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .widget-frame {
+      width: 100%;
+      height: 88vh;
+      min-height: 620px;
+      border: none;
+      border-radius: 16px;
+      display: block;
+      background: #fff;
+    }
+
     .footer {
       text-align: center;
       margin-top: 20px;
@@ -502,8 +542,9 @@
         padding: 24px 18px 20px;
       }
 
-      .widget {
-        height: 1040px;
+      .widget-frame {
+        height: 82vh;
+        min-height: 540px;
       }
     }
 
@@ -546,11 +587,14 @@
         Asheville Airport Express provides professional airport transportation and airport shuttle service serving Asheville Regional Airport (AVL) and the surrounding Western North Carolina region. We offer reliable airport transfers, private car service, and airport pickup service for individuals and small groups.
         <br><br>
         Our premium vehicles feature comfortable, all-leather interiors, delivering a clean and dependable airport ride service designed for punctual, stress-free travel. Whether you need a ride to the airport, airport pickup, or scheduled airport transportation service, we provide consistent flat-rate pricing with a focus on professionalism and on-time performance.
-        <br><br>
       </div>
 
       <div class="call-label"><strong>Call / Text</strong></div>
-      <a href="tel:+18283977377" class="call-btn">(828) 397-7377</a>
+      <a href="tel:+18283977377"
+         class="call-btn"
+         onclick="gtag('event', 'conversion', {'send_to': 'AW-667098794/CALL_CONVERSION'});">
+        (828) 397-7377
+      </a>
 
       <div class="after-hours-text">
         <span class="question-line">Need immediate assistance outside dispatch hours?</span>
@@ -606,7 +650,7 @@
       </div>
     </div>
 
-    <!-- IMAGE DETAILS -->
+    <!-- FLAT RATE DETAILS -->
     <div class="card">
       <div class="section-title">Flat Rate Details</div>
 
@@ -640,20 +684,25 @@
     <!-- BOOK -->
     <div class="card center">
       <div class="section-title">Book Online</div>
-      <iframe src="https://customer.moovs.app/airport-express-llc/iframe" class="widget"></iframe>
 
-      <div class="booking-response-box">
-        <div class="booking-response-title">Booking Confirmation</div>
-        <div class="booking-response-note">
-          <p><strong>During dispatch hours:</strong> Booking requests are typically confirmed within 1 hour.</p>
-          <p><strong>For immediate assistance:</strong> Please call or text.</p>
-          <p><strong>Outside dispatch hours:</strong> Requests are reviewed and confirmed the next business morning.</p>
+      <div class="booking-actions">
+        <button id="openBooking" class="book-btn" type="button">
+          Book Now
+        </button>
+
+        <div class="booking-response-box">
+          <div class="booking-response-title">Booking Confirmation</div>
+          <div class="booking-response-note">
+            <p><strong>During dispatch hours:</strong> Booking requests are typically confirmed within 1 hour.</p>
+            <p><strong>For immediate assistance:</strong> Please call or text.</p>
+            <p><strong>Outside dispatch hours:</strong> Requests are reviewed and confirmed the next business morning.</p>
+          </div>
         </div>
-      </div>
 
-      <div class="booking-policy">
-        By booking, you agree to our
-        <a href="policies.html" class="booking-policy-link">Service Policies</a>.
+        <div class="booking-policy">
+          By booking, you agree to our
+          <a href="policies.html" class="booking-policy-link">Service Policies</a>.
+        </div>
       </div>
     </div>
 
@@ -669,7 +718,7 @@
   <div class="modal" id="avl-modal">
     <div class="modal-inner">
       <button class="modal-close" data-modal-close>&times;</button>
-      <a href="https://customer.moovs.app/airport-express-llc/request/new" target="_blank" rel="noopener noreferrer">
+      <a href="#" id="openBookingFromImage">
         <img src="./img/flat_rate_transfer.png" class="modal-image" alt="Asheville Airport Transfer Details">
       </a>
     </div>
@@ -703,7 +752,48 @@
     </div>
   </div>
 
+  <!-- BOOKING MODAL -->
+  <div class="modal booking-widget-modal" id="bookingModal">
+    <div class="modal-inner">
+      <button class="modal-close" id="closeBooking">&times;</button>
+      <iframe
+        src="https://customer.moovs.app/airport-express-llc/iframe"
+        class="widget-frame"
+        title="Book Asheville Airport Express online">
+      </iframe>
+    </div>
+  </div>
+
   <script>
+    const bookingModal = document.getElementById('bookingModal');
+    const openBookingBtn = document.getElementById('openBooking');
+    const closeBookingBtn = document.getElementById('closeBooking');
+    const openBookingFromImage = document.getElementById('openBookingFromImage');
+
+    function openBookingModal() {
+      bookingModal.classList.add('open');
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-667098794/BOOKING_CONVERSION'
+      });
+    }
+
+    openBookingBtn.addEventListener('click', function() {
+      openBookingModal();
+    });
+
+    if (openBookingFromImage) {
+      openBookingFromImage.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('avl-modal').classList.remove('open');
+        openBookingModal();
+      });
+    }
+
+    closeBookingBtn.addEventListener('click', function() {
+      bookingModal.classList.remove('open');
+    });
+
     document.querySelectorAll('[data-modal-open]').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
