@@ -261,7 +261,7 @@
       <h1>Book Airport Transportation</h1>
 
       <div class="copy">
-        Reserve your ride with Asheville Airport Express using the secure online booking window below.
+        If you close the booking window, you can return home or reopen booking below.
       </div>
 
       <div class="button-stack">
@@ -270,7 +270,7 @@
       </div>
 
       <div class="note">
-        If you close the booking window, use the buttons here to return home or reopen booking.
+        Secure online booking is available through our booking window.
       </div>
     </div>
 
@@ -294,14 +294,17 @@
     const bookingModal = document.getElementById('bookingModal');
     const openBookingBtn = document.getElementById('openBooking');
     const closeBookingBtn = document.getElementById('closeBooking');
+    let bookingConversionSent = false;
 
     function openBookingModal() {
       bookingModal.classList.add('open');
 
-      // Replace BOOKING_CONVERSION with your real Google Ads conversion label if needed.
-      gtag('event', 'conversion', {
-        'send_to': 'AW-667098794/BOOKING_CONVERSION'
-      });
+      if (!bookingConversionSent) {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-667098794/BOOKING_CONVERSION'
+        });
+        bookingConversionSent = true;
+      }
     }
 
     openBookingBtn.addEventListener('click', function() {
@@ -316,6 +319,10 @@
       if (e.target === bookingModal) {
         bookingModal.classList.remove('open');
       }
+    });
+
+    window.addEventListener('load', function() {
+      openBookingModal();
     });
   </script>
 </body>
