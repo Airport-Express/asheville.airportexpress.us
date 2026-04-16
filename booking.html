@@ -4,27 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Book Asheville Airport Transportation | Asheville Airport Express</title>
+  <title>Book Airport Transportation | Asheville Airport Express</title>
   <meta
     name="description"
-    content="Book private airport transportation in Asheville, NC. Reserve reliable service to and from AVL with flat rates, early morning pickup options, and premium vehicles."
+    content="Book private airport transportation with Asheville Airport Express. Fast, simple booking for reliable airport service in Asheville, North Carolina."
   />
   <link rel="canonical" href="https://asheville.airportexpress.us/booking.html" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Book Asheville Airport Transportation | Asheville Airport Express" />
+  <meta property="og:title" content="Book Airport Transportation | Asheville Airport Express" />
   <meta
     property="og:description"
-    content="Reserve reliable private airport transportation to and from Asheville Regional Airport (AVL)."
+    content="Book reliable airport transportation with Asheville Airport Express."
   />
   <meta property="og:url" content="https://asheville.airportexpress.us/booking.html" />
   <meta property="og:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Book Asheville Airport Transportation | Asheville Airport Express" />
+  <meta name="twitter:title" content="Book Airport Transportation | Asheville Airport Express" />
   <meta
     name="twitter:description"
-    content="Reserve reliable private airport transportation to and from Asheville Regional Airport (AVL)."
+    content="Book reliable airport transportation with Asheville Airport Express."
   />
   <meta name="twitter:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
@@ -59,14 +59,13 @@
   <style>
     :root {
       --bg: #0b1220;
-      --panel: #111a2b;
       --text: #ffffff;
       --muted: #b8c2d6;
       --accent: #d4af37;
       --accent-hover: #e6c65a;
-      --radius: 20px;
       --line: rgba(255,255,255,0.08);
       --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 20px;
     }
 
     * { box-sizing: border-box; }
@@ -81,80 +80,65 @@
       background: var(--bg);
       color: var(--text);
       display: flex;
+      align-items: center;
       justify-content: center;
       padding: 24px;
     }
 
     .wrap {
       width: 100%;
-      max-width: 700px;
+      max-width: 520px;
       text-align: center;
-    }
-
-    .logo {
-      width: min(100%, 420px);
-      margin: 0 auto 26px;
-      display: block;
-      border-radius: 20px;
     }
 
     .card {
       background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 32px 26px 26px;
+      padding: 30px 24px 24px;
       box-shadow: var(--shadow);
-      margin-bottom: 18px;
-      text-align: left;
-      overflow: hidden;
     }
 
-    .card.center {
-      text-align: center;
+    .logo {
+      width: min(100%, 380px);
+      margin: 0 auto 22px;
+      display: block;
+      border-radius: 18px;
     }
 
-    .hero-title {
-      font-size: 2rem;
-      line-height: 1.2;
+    h1 {
       margin: 0 0 12px;
-      color: #fff;
-      text-align: center;
+      font-size: 1.9rem;
+      line-height: 1.2;
     }
 
-    .hero-copy,
-    .description,
-    .detail-copy,
-    .booking-policy,
-    .booking-response-note,
-    .list {
+    .copy {
       color: var(--muted);
       line-height: 1.7;
       font-size: 1rem;
+      margin-bottom: 22px;
     }
 
-    .hero-copy {
-      text-align: center;
-      margin: 0 auto 20px;
-      max-width: 580px;
-    }
-
-    .button-row {
+    .button-stack {
       display: flex;
+      flex-direction: column;
       gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 18px;
+      align-items: center;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 20px;
+      width: 100%;
+      max-width: 320px;
+      padding: 16px 18px;
       border-radius: 999px;
-      text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
-      transition: 0.2s ease;
+      font-size: 1.05rem;
+      text-decoration: none;
       text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease;
     }
 
     .btn-primary {
@@ -177,189 +161,73 @@
       border-color: rgba(255,255,255,0.15);
     }
 
-    .call-label {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .call-btn {
-      display: block;
-      width: 100%;
-      max-width: 340px;
-      margin: 0 auto;
-      padding: 16px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #000;
-      font-weight: 700;
-      font-size: 1.15rem;
-      text-decoration: none;
-      text-align: center;
-    }
-
-    .call-btn:hover {
-      background: var(--accent-hover);
-    }
-
-    .after-hours-text {
-      margin-top: 16px;
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 0.98rem;
-    }
-
-    .question-line {
-      display: block;
-      white-space: nowrap;
-    }
-
-    .text-line {
-      display: block;
-      margin-top: 4px;
-    }
-
-    .text-number {
-      color: inherit;
-      font-weight: 700;
-      text-decoration: none;
-      outline: none;
-      box-shadow: none;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    .text-number:hover,
-    .text-number:focus,
-    .text-number:active,
-    .text-number:visited {
-      color: inherit;
-      text-decoration: none;
-      outline: none;
-      box-shadow: none;
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-      color: #fff;
-    }
-
-    .inner-panel {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px 16px;
-      margin-top: 10px;
-      overflow: hidden;
-    }
-
-    .highlights-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .highlight-box {
-      padding: 16px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--line);
-    }
-
-    .highlight-title {
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .hours-grid {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 6px 12px;
-      align-items: center;
-    }
-
-    .hours-heading {
-      grid-column: 1 / -1;
-      color: #fff;
-      font-weight: 600;
-      margin-top: 2px;
-    }
-
-    .hours-heading.spaced {
-      margin-top: 16px;
-    }
-
-    .hours-day {
-      color: var(--muted);
-    }
-
-    .hours-time {
-      color: var(--muted);
-      text-align: right;
-      white-space: nowrap;
-    }
-
-    .widget {
-      width: 100%;
-      height: 980px;
-      border: none;
-      border-radius: 16px;
-      overflow: hidden;
-      display: block;
-      background: #fff;
-    }
-
-    .booking-response-box {
+    .note {
       margin-top: 18px;
-      padding: 16px 18px;
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      text-align: left;
-    }
-
-    .booking-response-title {
-      color: #fff;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .booking-response-note p {
-      margin: 0 0 10px;
-    }
-
-    .booking-response-note p:last-child {
-      margin-bottom: 0;
-    }
-
-    .booking-response-note strong {
-      color: #fff;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     .footer {
-      text-align: center;
-      margin-top: 20px;
+      margin-top: 18px;
       color: var(--muted);
       font-size: 0.95rem;
-    }
-
-    .footer-title {
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 6px;
+      text-align: center;
     }
 
     .footer a {
       color: var(--muted);
       text-decoration: none;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.82);
+      padding: 24px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-inner {
+      position: relative;
+      width: min(96vw, 980px);
+      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.75);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      width: 42px;
+      height: 42px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .widget-frame {
+      width: 100%;
+      height: 88vh;
+      min-height: 620px;
+      border: none;
+      border-radius: 16px;
+      display: block;
+      background: #fff;
     }
 
     @media (max-width: 640px) {
@@ -371,22 +239,13 @@
         padding: 24px 18px 20px;
       }
 
-      .widget {
-        height: 1040px;
+      h1 {
+        font-size: 1.65rem;
       }
 
-      .highlights-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 420px) {
-      .question-line {
-        white-space: normal;
-      }
-
-      .hero-title {
-        font-size: 1.7rem;
+      .widget-frame {
+        height: 82vh;
+        min-height: 540px;
       }
     }
   </style>
@@ -394,130 +253,70 @@
 
 <body>
   <div class="wrap">
-
-    <a href="/index.html" aria-label="Return to homepage">
-      <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
-    </a>
-
-    <div class="card center">
-      <h1 class="hero-title">Book Asheville Airport Transportation</h1>
-      <div class="hero-copy">
-        Reserve reliable private airport transportation to and from Asheville Regional Airport (AVL). Asheville Airport Express provides professional airport transfers, flat-rate local airport service, and comfortable premium vehicles for individuals and small groups.
-      </div>
-
-      <div class="button-row">
-        <a href="#book-now" class="btn btn-primary">Book Now</a>
-        <a href="tel:+18283977377" class="btn btn-secondary">Call / Text (828) 397-7377</a>
-      </div>
-    </div>
-
     <div class="card">
-      <div class="section-title">Why Book With Us</div>
-      <div class="highlights-grid">
-        <div class="highlight-box">
-          <div class="highlight-title">Reliable Airport Service</div>
-          <div class="description">Private airport transportation serving Asheville and surrounding Western North Carolina.</div>
-        </div>
-        <div class="highlight-box">
-          <div class="highlight-title">Comfortable Premium Vehicle</div>
-          <div class="description">Clean, dependable transportation with all-leather seating and a professional presentation.</div>
-        </div>
-        <div class="highlight-box">
-          <div class="highlight-title">Flat-Rate AVL Transfers</div>
-          <div class="description">Straightforward local airport pricing for standard Asheville airport transfer service.</div>
-        </div>
-        <div class="highlight-box">
-          <div class="highlight-title">Early Morning Availability</div>
-          <div class="description">Pickup hours begin at 4:00 AM to support early departures and airport drop-offs.</div>
-        </div>
-      </div>
-    </div>
+      <a href="/index.html" aria-label="Return to home">
+        <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
+      </a>
 
-    <div class="card center">
-      <div class="call-label"><strong>Call / Text</strong></div>
-      <a href="tel:+18283977377" class="call-btn">(828) 397-7377</a>
+      <h1>Book Airport Transportation</h1>
 
-      <div class="after-hours-text">
-        <span class="question-line">Need immediate assistance outside dispatch hours?</span>
-        <span class="text-line">Text <a href="sms:7273977377" class="text-number">(727) 397-7377</a></span>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-title">Hours</div>
-
-      <div class="inner-panel">
-        <div class="list hours-grid">
-          <div class="hours-heading">Dispatch Hours</div>
-
-          <div class="hours-day">Monday – Friday</div>
-          <div class="hours-time">9:00 AM – 5:00 PM</div>
-
-          <div class="hours-day">Saturday</div>
-          <div class="hours-time">10:00 AM – 2:00 PM</div>
-
-          <div class="hours-day">Sunday</div>
-          <div class="hours-time">10:00 AM – 2:00 PM</div>
-
-          <div class="hours-heading spaced">Pickup Hours</div>
-
-          <div class="hours-day">Monday – Friday</div>
-          <div class="hours-time">4:00 AM – 8:00 PM</div>
-
-          <div class="hours-day">Saturday & Sunday</div>
-          <div class="hours-time">4:00 AM – 8:00 PM</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-title">Rates</div>
-
-      <div class="inner-panel">
-        <div class="list" style="margin-bottom:0;">
-          <div style="color:#fff; font-weight:700; margin-bottom:6px;">Standard Rate</div>
-          $2.50 per mile
-          <div style="margin-top:6px;">Minimum $65</div>
-
-          <div style="height:12px;"></div>
-
-          <div style="color:#fff; font-weight:700; margin-bottom:6px;">AVL Flat Rate Details</div>
-          <div>Early Morning Service (4am - 8am): <strong style="color:#fff;">$75</strong></div>
-          <div>Daily Airport Transfer (8am - 4pm): <strong style="color:#fff;">$65</strong></div>
-
-          <div style="height:12px;"></div>
-
-          <div style="color:#fff; font-weight:700; margin-bottom:6px;">Premium Service Hours</div>
-          <div>Early Hours Service (4am - 8am): <strong style="color:#fff;">+15%</strong></div>
-          <div>Weekend Service: <strong style="color:#fff;">+15%</strong></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card center" id="book-now">
-      <div class="section-title">Book Online</div>
-      <iframe src="https://customer.moovs.app/airport-express-llc/iframe" class="widget" title="Book Asheville Airport Express online"></iframe>
-
-      <div class="booking-response-box">
-        <div class="booking-response-title">Booking Confirmation</div>
-        <div class="booking-response-note">
-          <p><strong>During dispatch hours:</strong> Booking requests are typically confirmed within 1 hour.</p>
-          <p><strong>For immediate assistance:</strong> Please call or text.</p>
-          <p><strong>Outside dispatch hours:</strong> Requests are reviewed and confirmed the next business morning.</p>
-        </div>
+      <div class="copy">
+        Reserve your ride with Asheville Airport Express using the secure online booking window below.
       </div>
 
-      <div class="booking-policy">
-        By booking, you agree to our
-        <a href="policies.html" style="color:#f0d479; font-weight:700; text-decoration:none;">Service Policies</a>.
+      <div class="button-stack">
+        <button id="openBooking" class="btn btn-primary" type="button">Book Now</button>
+        <a href="/index.html" class="btn btn-secondary">Home</a>
+      </div>
+
+      <div class="note">
+        If you close the booking window, use the buttons here to return home or reopen booking.
       </div>
     </div>
 
     <div class="footer">
-      <div class="footer-title">CONTACT</div>
       <a href="mailto:admin@airportexpress.us">admin@airportexpress.us</a>
     </div>
-
   </div>
+
+  <div class="modal" id="bookingModal">
+    <div class="modal-inner">
+      <button class="modal-close" id="closeBooking" aria-label="Close booking window">&times;</button>
+      <iframe
+        src="https://customer.moovs.app/airport-express-llc/iframe"
+        class="widget-frame"
+        title="Book Asheville Airport Express online">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    const bookingModal = document.getElementById('bookingModal');
+    const openBookingBtn = document.getElementById('openBooking');
+    const closeBookingBtn = document.getElementById('closeBooking');
+
+    function openBookingModal() {
+      bookingModal.classList.add('open');
+
+      // Replace BOOKING_CONVERSION with your real Google Ads conversion label if needed.
+      gtag('event', 'conversion', {
+        'send_to': 'AW-667098794/BOOKING_CONVERSION'
+      });
+    }
+
+    openBookingBtn.addEventListener('click', function() {
+      openBookingModal();
+    });
+
+    closeBookingBtn.addEventListener('click', function() {
+      bookingModal.classList.remove('open');
+    });
+
+    bookingModal.addEventListener('click', function(e) {
+      if (e.target === bookingModal) {
+        bookingModal.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
