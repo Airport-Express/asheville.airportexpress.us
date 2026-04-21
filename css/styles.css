@@ -59,6 +59,14 @@ body {
   text-align: center;
 }
 
+.hero-title {
+  color: var(--text);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
 .description {
   color: var(--text);
   line-height: 1.6;
@@ -212,6 +220,10 @@ body {
   color: var(--muted);
   line-height: 1.6;
   margin-bottom: 8px;
+}
+
+.card.center .detail-copy {
+  text-align: center;
 }
 
 .rates-block {
@@ -538,6 +550,10 @@ body {
   .description {
     font-size: 1.08rem;
     line-height: 1.55;
+  }
+
+  .hero-title {
+    font-size: 1.2rem;
   }
 }
 
