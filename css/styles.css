@@ -60,10 +60,17 @@ body {
 }
 
 .description {
-  color: var(--muted);
-  line-height: 1.7;
-  font-size: 1.05rem;
-  margin-bottom: 20px;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 1.2rem;
+  margin-bottom: 22px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.description br {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .call-label {
@@ -313,17 +320,12 @@ body {
   font-size: 1.35rem;
   letter-spacing: 2px;
   margin-bottom: 8px;
-  transition: color 0.25s ease;
 }
 
 .reviews-read {
   color: #fff;
   font-weight: 700;
   font-size: 1rem;
-}
-
-.reviews-link-wrap:hover .reviews-stars {
-  color: var(--accent);
 }
 
 .booking-actions {
@@ -531,6 +533,11 @@ body {
 
   .card {
     padding: 24px 18px 20px;
+  }
+
+  .description {
+    font-size: 1.08rem;
+    line-height: 1.55;
   }
 }
 
