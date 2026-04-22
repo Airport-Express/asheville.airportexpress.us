@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Asheville Airport Transportation Service (AVL) | Asheville Airport Express</title>
+  <title>Asheville Airport Transportation (AVL) | Asheville Airport Express</title>
   <meta
     name="description"
-    content="Private airport transportation to and from Asheville Regional Airport (AVL). Asheville Airport Express offers reliable airport rides, car service, and airport shuttle alternatives in Asheville, NC."
+    content="Reliable airport transportation to and from Asheville Regional Airport (AVL). Call or book your ride today."
   />
   <link rel="canonical" href="https://ashevilleairportexpress.com/asheville-airport-transportation-avl.html" />
+
+  <link rel="stylesheet" href="/css/styles.css" />
 
   <!-- Google tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-667098794"></script>
@@ -20,120 +22,6 @@
     gtag('config', 'AW-667098794');
     gtag('config', 'G-MJ918GX7BG');
   </script>
-
-  <style>
-    :root {
-      --bg: #0b1220;
-      --panel: #111a2b;
-      --text: #ffffff;
-      --muted: #b8c2d6;
-      --accent: #d4af37;
-      --accent-hover: #e6c65a;
-      --radius: 20px;
-      --line: rgba(255,255,255,0.08);
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      padding: 24px;
-    }
-
-    .wrap {
-      max-width: 560px;
-      width: 100%;
-      text-align: center;
-    }
-
-    .logo {
-      width: min(100%, 420px);
-      margin: 0 auto 26px;
-      border-radius: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px 20px;
-      margin-bottom: 18px;
-      text-align: left;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 8px;
-    }
-
-    .nav-links a {
-      flex: 1;
-      padding: 8px 4px;
-      font-size: 0.8rem;
-      text-align: center;
-      border-radius: 10px;
-      border: 1px solid var(--line);
-      color: white;
-      text-decoration: none;
-    }
-
-    .page-title {
-      text-align: center;
-      font-size: 1.4rem;
-      margin-bottom: 12px;
-      font-weight: bold;
-    }
-
-    .description {
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .call-btn {
-      display: block;
-      text-align: center;
-      padding: 14px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: black;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .section-title {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .inner-panel {
-      background: rgba(255,255,255,0.02);
-      padding: 16px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-    }
-
-    .hours-grid {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 6px 10px;
-    }
-
-    .hours-heading {
-      grid-column: 1 / -1;
-      font-weight: bold;
-      color: white;
-    }
-
-    .highlight { color: white; font-weight: bold; }
-
-    .note { font-size: 0.9rem; color: #aaa; }
-  </style>
 </head>
 
 <body>
@@ -145,7 +33,7 @@
   </a>
 
   <!-- NAV -->
-  <div class="card">
+  <div class="card center">
     <div class="nav-links">
       <a href="/index.html">Home</a>
       <a href="/asheville-to-charlotte-airport-clt.html">AVL to CLT</a>
@@ -154,77 +42,61 @@
     </div>
   </div>
 
-  <!-- DESCRIPTION -->
+  <!-- HERO -->
   <div class="card">
-    <h1 class="page-title">Asheville Airport Transportation</h1>
+    <div class="hero-title">
+      Asheville Airport Transportation (AVL)
+    </div>
 
     <div class="description">
-      Asheville Airport Express provides private airport transportation to and from Asheville Regional Airport (AVL).
+      Reliable airport transportation to and from Asheville Regional Airport.
       <br><br>
-      Our airport car service offers a reliable alternative to standard airport shuttle and airport taxi options in Asheville, North Carolina.
+      Don’t get stranded by Uber or Lyft. Call or book online to reserve your ride today.
     </div>
-
-    <a href="tel:+18283977377" class="call-btn">Call / Text 828-397-7377</a>
   </div>
 
-  <!-- HOURS -->
+  <!-- CALL -->
+  <div class="card center">
+    <div class="section-title">Call or Text Now</div>
+
+    <a href="tel:+18283977377" class="call-btn">(828) 397-7377</a>
+  </div>
+
+  <!-- BOOK -->
+  <div class="card center">
+    <div class="section-title">Reserve Your Ride</div>
+
+    <a href="/booking.html" class="book-btn">Book Now</a>
+  </div>
+
+  <!-- 24/7 -->
+  <div class="card center">
+    <div class="section-title">Available 24/7</div>
+  </div>
+
+  <!-- TRUST SECTION -->
   <div class="card">
-    <div class="section-title">Hours</div>
+    <div class="description">
+      Asheville Airport Express is locally owned and operated by Asheville residents who know the city, its traffic patterns, and the most efficient routes to ensure you arrive on time.
+      <br><br>
+      We take pride in serving our community and understand that every ride matters, whether you’re heading out on an important trip or returning home.
+      <br><br>
+      No matter where you're from, when you ride with us, you can count on dependable service backed by local expertise.
+      <br><br>
+      To us, our reputation matters, and we earn it with every ride.
+    </div>
+  </div>
 
-    <div class="inner-panel">
-      <div class="hours-grid">
-        <div class="hours-heading">Dispatch Hours</div>
-
-        <div>Monday - Friday</div>
-        <div>9:00 AM - 5:00 PM</div>
-
-        <div>Saturday</div>
-        <div>10:00 AM - 2:00 PM</div>
-
-        <div>Sunday</div>
-        <div>10:00 AM - 2:00 PM</div>
-
-        <div class="hours-heading">Pickup Hours</div>
-
-        <div>All Days</div>
-        <div>4:00 AM - 8:00 PM</div>
+  <!-- REVIEWS -->
+  <a href="https://g.page/r/CVkWkcXdZyyOEAE" class="reviews-link-wrap" target="_blank">
+    <div class="reviews-outer">
+      <div class="reviews-inner">
+        <div class="reviews-google">Find Us On Google</div>
+        <div class="reviews-stars">★★★★★</div>
+        <div class="reviews-read">Read Our Reviews</div>
       </div>
     </div>
-  </div>
-
-  <!-- RATES -->
-  <div class="card">
-    <div class="section-title">Rates</div>
-
-    <div class="inner-panel">
-      <div class="highlight">Standard Rate</div>
-      $2.50 per mile
-      <div class="note">Minimum $65</div>
-
-      <br>
-
-      <div class="highlight">Premium Hours</div>
-      <div class="note">4am - 8am: +30%</div>
-      <div class="note">Weekend: +15%</div>
-    </div>
-  </div>
-
-  <!-- AVL DETAILS -->
-  <div class="card">
-    <div class="section-title">AVL Airport Service</div>
-
-    <div class="inner-panel">
-      <div class="highlight">Flat Rate</div>
-      <div class="note">Early Morning (4am - 8am): $85</div>
-      <div class="note">Daily (8am - 4pm): $65</div>
-
-      <br>
-
-      <a href="/index.html" style="color:#d4af37; font-weight:bold; text-decoration:none;">
-        Return to main booking page
-      </a>
-    </div>
-  </div>
+  </a>
 
 </div>
 </body>
