@@ -80,43 +80,42 @@
       background: var(--bg);
       color: var(--text);
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: flex-start;
       padding: 24px;
     }
 
     .wrap {
       width: 100%;
-      max-width: 520px;
+      max-width: 560px;
       text-align: center;
-    }
-
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 30px 24px 24px;
-      box-shadow: var(--shadow);
     }
 
     .logo {
       width: min(100%, 380px);
-      margin: 0 auto 22px;
+      margin: 0 auto 18px;
       display: block;
       border-radius: 18px;
     }
 
-    h1 {
-      margin: 0 0 12px;
-      font-size: 1.9rem;
-      line-height: 1.2;
+    .booking-shell {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 12px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
     }
 
-    .copy {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 1rem;
-      margin-bottom: 22px;
+    .widget-frame {
+      width: 100%;
+      height: 820px;
+      max-height: 820px;
+      border: none;
+      border-radius: 16px;
+      display: block;
+      background: #fff;
+      overflow: hidden;
     }
 
     .button-stack {
@@ -141,15 +140,6 @@
       transition: 0.2s ease;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #000;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent-hover);
-    }
-
     .btn-secondary {
       background: rgba(255,255,255,0.03);
       border: 1px solid var(--line);
@@ -162,7 +152,7 @@
     }
 
     .note {
-      margin-top: 18px;
+      margin-top: 14px;
       color: var(--muted);
       font-size: 0.95rem;
       line-height: 1.6;
@@ -180,54 +170,8 @@
       text-decoration: none;
     }
 
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0,0,0,0.82);
-      padding: 24px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal.open {
-      display: flex;
-    }
-
-    .modal-inner {
-      position: relative;
-      width: min(96vw, 980px);
-      background: linear-gradient(180deg, rgba(17,26,43,0.98), rgba(11,18,32,0.98));
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      padding: 18px;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(0,0,0,0.75);
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      width: 42px;
-      height: 42px;
-      font-size: 1.3rem;
-      cursor: pointer;
-      z-index: 2;
-    }
-
-    .widget-frame {
-      width: 100%;
-      height: 88vh;
-      min-height: 620px;
-      border: none;
-      border-radius: 16px;
-      display: block;
-      background: #fff;
+    .footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 640px) {
@@ -235,17 +179,16 @@
         padding: 16px;
       }
 
-      .card {
-        padding: 24px 18px 20px;
-      }
-
-      h1 {
-        font-size: 1.65rem;
-      }
-
       .widget-frame {
-        height: 82vh;
-        min-height: 540px;
+        height: 760px;
+        max-height: 760px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .widget-frame {
+        height: 700px;
+        max-height: 700px;
       }
     }
   </style>
@@ -253,25 +196,24 @@
 
 <body>
   <div class="wrap">
-    <div class="card">
-      <a href="/index.html" aria-label="Return to home">
-        <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
-      </a>
+    <a href="/index.html" aria-label="Return to home">
+      <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
+    </a>
 
-      <h1>Book Airport Transportation</h1>
+    <div class="booking-shell">
+      <iframe
+        src="https://customer.moovs.app/airport-express-llc/iframe"
+        class="widget-frame"
+        title="Book Asheville Airport Express online">
+      </iframe>
+    </div>
 
-      <div class="copy">
-        If you close the booking window, you can return home or reopen booking below.
-      </div>
+    <div class="button-stack">
+      <a href="/index.html" class="btn btn-secondary">Home</a>
+    </div>
 
-      <div class="button-stack">
-        <button id="openBooking" class="btn btn-primary" type="button">Book Now</button>
-        <a href="/index.html" class="btn btn-secondary">Home</a>
-      </div>
-
-      <div class="note">
-        Secure online booking is available through our booking window.
-      </div>
+    <div class="note">
+      Secure online booking is available through our booking form.
     </div>
 
     <div class="footer">
@@ -279,50 +221,11 @@
     </div>
   </div>
 
-  <div class="modal" id="bookingModal">
-    <div class="modal-inner">
-      <button class="modal-close" id="closeBooking" aria-label="Close booking window">&times;</button>
-      <iframe
-        src="https://customer.moovs.app/airport-express-llc/iframe"
-        class="widget-frame"
-        title="Book Asheville Airport Express online">
-      </iframe>
-    </div>
-  </div>
-
   <script>
-    const bookingModal = document.getElementById('bookingModal');
-    const openBookingBtn = document.getElementById('openBooking');
-    const closeBookingBtn = document.getElementById('closeBooking');
-    let bookingConversionSent = false;
-
-    function openBookingModal() {
-      bookingModal.classList.add('open');
-
-      if (!bookingConversionSent) {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-667098794/BOOKING_CONVERSION'
-        });
-        bookingConversionSent = true;
-      }
-    }
-
-    openBookingBtn.addEventListener('click', function() {
-      openBookingModal();
-    });
-
-    closeBookingBtn.addEventListener('click', function() {
-      bookingModal.classList.remove('open');
-    });
-
-    bookingModal.addEventListener('click', function(e) {
-      if (e.target === bookingModal) {
-        bookingModal.classList.remove('open');
-      }
-    });
-
     window.addEventListener('load', function() {
-      openBookingModal();
+      gtag('event', 'conversion', {
+        'send_to': 'AW-667098794/BOOKING_CONVERSION'
+      });
     });
   </script>
 </body>
