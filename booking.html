@@ -8,23 +8,19 @@
   <meta name="description" content="Book private airport transportation with Asheville Airport Express. Fast, simple booking for reliable airport service in Asheville, North Carolina." />
   <link rel="canonical" href="https://asheville.airportexpress.us/booking.html" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/booking.css" />
+  <link rel="stylesheet" href="/css/styles.css" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Book Airport Transportation | Asheville Airport Express" />
   <meta property="og:description" content="Book reliable airport transportation with Asheville Airport Express." />
   <meta property="og:url" content="https://asheville.airportexpress.us/booking.html" />
   <meta property="og:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Book Airport Transportation | Asheville Airport Express" />
   <meta name="twitter:description" content="Book reliable airport transportation with Asheville Airport Express." />
   <meta name="twitter:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
-  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,7 +38,6 @@
   }
   </script>
 
-  <!-- Google Tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18111898448"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -52,38 +47,34 @@
     gtag('config', 'AW-18111898448');
     gtag('config', 'G-MJ918GX7BG');
   </script>
-
 </head>
 
 <body>
-
   <div class="wrap">
 
-    <!-- LOGO -->
     <a href="/index.html">
       <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
     </a>
 
-    <!-- CARD -->
-    <div class="card">
-      <h1>Book Airport Transportation</h1>
+    <div class="card center">
+      <div class="hero-title">Book Airport Transportation</div>
 
-      <div class="copy">
+      <div class="description">
         Complete your booking below. If the booking window is closed, use the button to reopen it.
       </div>
 
-      <button class="btn btn-primary" onclick="openBooking()">Book Now</button>
-      <a href="/index.html" class="btn btn-secondary">Home</a>
+      <div class="booking-actions">
+        <button class="book-btn" onclick="openBooking()">Book Now</button>
+        <a href="/index.html" class="book-btn" style="background: rgba(255,255,255,0.03); color: #fff; border: 1px solid rgba(255,255,255,0.08);">Home</a>
+      </div>
     </div>
 
-    <!-- FOOTER -->
     <div class="footer">
       <a href="mailto:admin@airportexpress.us">admin@airportexpress.us</a>
     </div>
 
   </div>
 
-  <!-- MODAL -->
   <div id="bookingModal" class="booking-modal">
     <div class="booking-modal-content">
       <button class="close-btn" onclick="closeBooking()" aria-label="Close booking window">✕</button>
@@ -96,7 +87,6 @@
     </div>
   </div>
 
-  <!-- SCRIPT -->
   <script>
     function openBooking() {
       document.getElementById("bookingModal").style.display = "flex";
@@ -106,11 +96,9 @@
       document.getElementById("bookingModal").style.display = "none";
     }
 
-    // Auto-open on page load
     window.onload = function () {
       openBooking();
     };
   </script>
-
 </body>
 </html>
