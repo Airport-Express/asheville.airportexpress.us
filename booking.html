@@ -5,54 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Book Airport Transportation | Asheville Airport Express</title>
-  <meta
-    name="description"
-    content="Book private airport transportation with Asheville Airport Express. Fast, simple booking for reliable airport service in Asheville, North Carolina."
-  />
+  <meta name="description" content="Book private airport transportation with Asheville Airport Express. Fast, simple booking for reliable airport service in Asheville, North Carolina." />
   <link rel="canonical" href="https://asheville.airportexpress.us/booking.html" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Book Airport Transportation | Asheville Airport Express" />
-  <meta
-    property="og:description"
-    content="Book reliable airport transportation with Asheville Airport Express."
-  />
+  <meta property="og:description" content="Book reliable airport transportation with Asheville Airport Express." />
   <meta property="og:url" content="https://asheville.airportexpress.us/booking.html" />
   <meta property="og:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Book Airport Transportation | Asheville Airport Express" />
-  <meta
-    name="twitter:description"
-    content="Book reliable airport transportation with Asheville Airport Express."
-  />
+  <meta name="twitter:description" content="Book reliable airport transportation with Asheville Airport Express." />
   <meta name="twitter:image" content="https://asheville.airportexpress.us/img/asheville_airport_express_logo.png" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TaxiService",
-    "name": "Asheville Airport Express",
-    "url": "https://asheville.airportexpress.us/booking.html",
-    "telephone": "+1-828-397-7377",
-    "areaServed": "Asheville, NC",
-    "serviceType": [
-      "Airport Transportation",
-      "Airport Shuttle",
-      "Car Service"
-    ],
-    "priceRange": "$$"
-  }
-  </script>
-
-  <!-- Google tag -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-667098794"></script>
+  <!-- Google Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18111898448"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', 'AW-667098794');
+    gtag('config', 'AW-18111898448');
     gtag('config', 'G-MJ918GX7BG');
   </script>
 
@@ -62,7 +36,6 @@
       --text: #ffffff;
       --muted: #b8c2d6;
       --accent: #d4af37;
-      --accent-hover: #e6c65a;
       --line: rgba(255,255,255,0.08);
       --shadow: 0 18px 50px rgba(0,0,0,0.35);
       --radius: 20px;
@@ -70,19 +43,13 @@
 
     * { box-sizing: border-box; }
 
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      scroll-behavior: smooth;
-    }
-
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       padding: 24px;
     }
 
@@ -100,36 +67,22 @@
     }
 
     .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      background: rgba(255,255,255,0.04);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 26px 22px 22px;
-      box-shadow: var(--shadow);
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: 1.7rem;
-    }
-
-    .copy {
-      color: var(--muted);
-      line-height: 1.6;
+      padding: 24px;
       margin-bottom: 18px;
     }
 
     .btn {
-      display: inline-block;
       width: 100%;
       max-width: 320px;
-      padding: 16px;
+      padding: 14px;
       border-radius: 999px;
-      font-weight: 700;
-      text-decoration: none;
-      text-align: center;
+      font-weight: bold;
       border: none;
       cursor: pointer;
+      margin-top: 10px;
     }
 
     .btn-primary {
@@ -138,87 +91,116 @@
     }
 
     .btn-secondary {
-      margin-top: 12px;
-      background: rgba(255,255,255,0.03);
+      background: transparent;
       border: 1px solid var(--line);
       color: #fff;
     }
 
-    .booking-shell {
-      width: 100%;
-      margin-top: 18px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 12px;
-      box-shadow: var(--shadow);
+    .footer {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* MODAL */
+    .booking-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .booking-modal.show {
+      opacity: 1;
+    }
+
+    .booking-modal-content {
+      width: 95%;
+      max-width: 520px;
+      height: 85vh;
+      background: #111;
+      border-radius: 16px;
       overflow: hidden;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 
     .widget-frame {
       width: 100%;
-      height: 1040px;
-      max-height: 1040px;
+      height: 100%;
       border: none;
-      border-radius: 16px;
-      display: block;
       background: #fff;
     }
 
-    .footer {
-      margin-top: 16px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .footer a {
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    @media (max-width: 640px) {
-      body { padding: 16px; }
-
-      .widget-frame {
-        height: 940px;
-        max-height: 940px;
-      }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      z-index: 10000;
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <a href="/index.html">
-      <img src="./img/asheville_airport_express_logo.png" class="logo" />
-    </a>
+<div class="wrap">
 
-    <div class="card">
-      <h1>Book Airport Transportation</h1>
+  <a href="/index.html">
+    <img src="./img/asheville_airport_express_logo.png" class="logo" />
+  </a>
 
-      <div class="copy">
-        Complete your booking below. For immediate assistance, please call or text.
-      </div>
+  <div class="card">
+    <h1>Book Airport Transportation</h1>
+    <p>Complete your booking below or use the button if the window is closed.</p>
 
-      <a href="#booking-widget" class="btn btn-primary">Book Now</a>
-      <a href="/index.html" class="btn btn-secondary">Home</a>
-    </div>
-
-    <!-- AUTO-LOADED WIDGET -->
-    <div id="booking-widget" class="booking-shell">
-      <iframe
-        src="https://customer.moovs.app/airport-express-llc/iframe"
-        class="widget-frame"
-        title="Book Asheville Airport Express online">
-      </iframe>
-    </div>
-
-    <div class="footer">
-      <a href="mailto:admin@airportexpress.us">admin@airportexpress.us</a>
-    </div>
-
+    <button class="btn btn-primary" onclick="openBooking()">Book Now</button>
+    <a href="/index.html" class="btn btn-secondary">Home</a>
   </div>
+
+  <div class="footer">
+    <a href="mailto:admin@airportexpress.us">admin@airportexpress.us</a>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="bookingModal" class="booking-modal">
+  <div class="booking-modal-content">
+    <button class="close-btn" onclick="closeBooking()">✕</button>
+
+    <iframe
+      src="https://customer.moovs.app/airport-express-llc/iframe"
+      class="widget-frame"
+      title="Booking">
+    </iframe>
+  </div>
+</div>
+
+<script>
+function openBooking() {
+  const modal = document.getElementById("bookingModal");
+  modal.style.display = "flex";
+}
+
+function closeBooking() {
+  const modal = document.getElementById("bookingModal");
+  modal.style.display = "none";
+}
+
+/* AUTO OPEN */
+window.onload = function() {
+  openBooking();
+};
+</script>
 
 </body>
 </html>
