@@ -411,3 +411,103 @@ body {
     white-space: normal;
   }
 }
+/* =============================== */
+/* 🚗 VEHICLE GALLERY FIX */
+/* =============================== */
+
+.vehicle-stage {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+}
+
+.vehicle-stage img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ARROWS */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 72px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  z-index: 2;
+}
+
+.gallery-arrow.left {
+  left: 14px;
+}
+
+.gallery-arrow.right {
+  right: 14px;
+}
+
+/* THUMBNAILS */
+.thumb-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.thumb-btn {
+  padding: 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+}
+
+.thumb-btn img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.thumb-btn.active {
+  border-color: rgba(212,175,55,0.9);
+}
+
+/* SPECS GRID */
+.spec-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 14px;
+  color: #b8c2d6;
+  line-height: 1.6;
+}
+
+.spec-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.spec-value {
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* MOBILE FIX */
+@media (max-width: 480px) {
+  .thumb-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
