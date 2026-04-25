@@ -87,23 +87,23 @@
     <!-- GALLERY -->
     <div class="card">
       <div class="vehicle-stage">
-        <button class="gallery-arrow left" id="prevBtn">&#8249;</button>
-        <img id="mainVehicleImage" src="./img/gmc_acadia_1.JPG" alt="GMC Acadia cargo area view">
-        <button class="gallery-arrow right" id="nextBtn">&#8250;</button>
+        <button class="gallery-arrow left" id="prevBtn" aria-label="Previous vehicle image">&#8249;</button>
+        <img id="mainVehicleImage" src="./img/gmc_acadia_1.JPG" alt="GMC Acadia exterior view">
+        <button class="gallery-arrow right" id="nextBtn" aria-label="Next vehicle image">&#8250;</button>
       </div>
 
       <div class="thumb-row">
-        <button class="thumb-btn active" data-index="0">
-          <img src="./img/gmc_acadia_1.JPG">
+        <button class="thumb-btn active" data-index="0" aria-label="Show GMC Acadia exterior image">
+          <img src="./img/gmc_acadia_1.JPG" alt="GMC Acadia exterior thumbnail">
         </button>
-        <button class="thumb-btn" data-index="1">
-          <img src="./img/gmc_acadia_2.JPG">
+        <button class="thumb-btn" data-index="1" aria-label="Show GMC Acadia seating image">
+          <img src="./img/gmc_acadia_2.JPG" alt="GMC Acadia seating thumbnail">
         </button>
-        <button class="thumb-btn" data-index="2">
-          <img src="./img/gmc_acadia_3.JPG">
+        <button class="thumb-btn" data-index="2" aria-label="Show GMC Acadia interior image">
+          <img src="./img/gmc_acadia_3.JPG" alt="GMC Acadia interior thumbnail">
         </button>
-        <button class="thumb-btn" data-index="3">
-          <img src="./img/gmc_acadia_4.JPG">
+        <button class="thumb-btn" data-index="3" aria-label="Show GMC Acadia cargo area image">
+          <img src="./img/gmc_acadia_4.JPG" alt="GMC Acadia cargo area thumbnail">
         </button>
       </div>
     </div>
@@ -128,33 +128,46 @@
       </div>
     </div>
 
-    <!-- DESCRIPTION + CTA -->
+    <!-- DESCRIPTION -->
     <div class="card">
       <div class="detail-copy">
         Clean, comfortable, and designed for reliability, this vehicle is ideal for airport transportation, long-distance rides, and small group travel.
       </div>
-
-      <a href="tel:+18283977377" class="call-btn">Call / Text 828-397-7377</a>
-      <a href="/booking.html" class="call-btn" style="margin-top:10px;">Request Ride</a>
     </div>
 
   </div>
 
   <script>
     const images = [
-      "./img/gmc_acadia_1.JPG",
-      "./img/gmc_acadia_2.JPG",
-      "./img/gmc_acadia_3.JPG",
-      "./img/gmc_acadia_4.JPG"
+      {
+        src: "./img/gmc_acadia_1.JPG",
+        alt: "GMC Acadia exterior view"
+      },
+      {
+        src: "./img/gmc_acadia_2.JPG",
+        alt: "GMC Acadia seating view"
+      },
+      {
+        src: "./img/gmc_acadia_3.JPG",
+        alt: "GMC Acadia interior view"
+      },
+      {
+        src: "./img/gmc_acadia_4.JPG",
+        alt: "GMC Acadia cargo area view"
+      }
     ];
 
     let currentIndex = 0;
+
     const mainImage = document.getElementById("mainVehicleImage");
     const thumbButtons = document.querySelectorAll(".thumb-btn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
     function updateGallery(index) {
       currentIndex = index;
-      mainImage.src = images[index];
+      mainImage.src = images[index].src;
+      mainImage.alt = images[index].alt;
 
       thumbButtons.forEach((btn, i) => {
         btn.classList.toggle("active", i === index);
@@ -165,13 +178,15 @@
       btn.addEventListener("click", () => updateGallery(index));
     });
 
-    document.getElementById("prevBtn").onclick = () => {
-      updateGallery((currentIndex - 1 + images.length) % images.length);
-    };
+    prevBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex - 1 + images.length) % images.length;
+      updateGallery(newIndex);
+    });
 
-    document.getElementById("nextBtn").onclick = () => {
-      updateGallery((currentIndex + 1) % images.length);
-    };
+    nextBtn.addEventListener("click", () => {
+      const newIndex = (currentIndex + 1) % images.length;
+      updateGallery(newIndex);
+    });
   </script>
 </body>
 </html>
