@@ -25,7 +25,7 @@
   }
   </script>
 
-  <!-- Google Ads + GA4 (clean, single system) -->
+  <!-- Google Ads + GA4 (clean single tag) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128182436"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -36,21 +36,14 @@
     gtag('config', 'G-MJ918GX7BG');
   </script>
 
-  <!-- Conversion tracking function -->
+  <!-- Conversion trigger -->
   <script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
+  function gtag_report_conversion() {
     gtag('event', 'conversion', {
-        'send_to': 'AW-18128182436/XthuCN67YqQcEKS5mMRD',
-        'value': 75.0,
-        'currency': 'USD',
-        'event_callback': callback
+      'send_to': 'AW-18128182436/XthuCN677qQcEKS5mMRD',
+      'value': 40.0,
+      'currency': 'USD'
     });
-    return false;
   }
   </script>
 
@@ -73,13 +66,16 @@
 
       <a href="tel:+18283977377"
          class="call-btn"
-         onclick="return gtag_report_conversion('tel:+18283977377');">
+         onclick="gtag_report_conversion();">
         (828) 397-7377
       </a>
     </div>
 
     <!-- REVIEWS -->
-    <a href="https://g.page/r/CVkWkcXdZyyOEAE" class="reviews-link-wrap" target="_blank" rel="noopener noreferrer">
+    <a href="https://g.page/r/CVkWkcXdZyyOEAE"
+       class="reviews-link-wrap"
+       target="_blank"
+       rel="noopener noreferrer">
       <div class="reviews-outer">
         <div class="reviews-inner">
           <div class="reviews-google">Find Us On Google</div>
