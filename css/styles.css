@@ -89,47 +89,45 @@ body {
   color: var(--text);
 }
 
-/* BUTTONS */
+/* ===============================
+   UPDATED BUTTONS (IMPROVED)
+=============================== */
 .call-btn,
 .book-btn {
   display: block;
   width: 100%;
   max-width: 340px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 18px 22px;
+  margin: 0 auto;
+  padding: 20px 22px;
   border-radius: 999px;
   background: linear-gradient(180deg, var(--accent-hover), var(--accent));
   color: #000;
   font-weight: 800;
-  font-size: 1.18rem;
-  letter-spacing: 0.2px;
+  font-size: 1.22rem;
   text-decoration: none;
   text-align: center;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
   border: 1px solid rgba(255,255,255,0.18);
   cursor: pointer;
+
   box-shadow:
-    0 12px 28px rgba(212,175,55,0.30),
-    0 2px 0 rgba(0,0,0,0.20);
-  -webkit-tap-highlight-color: transparent;
+    0 14px 32px rgba(212,175,55,0.38),
+    0 0 0 4px rgba(212,175,55,0.08),
+    0 2px 0 rgba(0,0,0,0.22);
+
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .call-btn:hover,
 .book-btn:hover {
-  background: linear-gradient(180deg, #f1d46f, var(--accent-hover));
   transform: translateY(-1px);
-  box-shadow:
-    0 16px 34px rgba(212,175,55,0.38),
-    0 2px 0 rgba(0,0,0,0.20);
 }
 
 .call-btn:active,
 .book-btn:active {
-  transform: translateY(1px) scale(0.99);
+  transform: scale(0.97);
   box-shadow:
     0 8px 18px rgba(212,175,55,0.25),
-    0 1px 0 rgba(0,0,0,0.20);
+    0 1px 0 rgba(0,0,0,0.2);
 }
 
 /* AFTER HOURS */
