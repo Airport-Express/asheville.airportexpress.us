@@ -25,7 +25,7 @@
   }
   </script>
 
-  <!-- Google Ads + GA4 -->
+  <!-- Google Ads + GA4 (PRIMARY TAG) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18111898448"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -33,31 +33,52 @@
     gtag('js', new Date());
 
     gtag('config', 'AW-18128182436');
-    gtag('config', 'AW-667098794');
     gtag('config', 'G-MJ918GX7BG');
   </script>
+
+  <!-- Conversion tracking function -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18128182436/xSktCJjjh6UcEKS5mMRD',
+        'value': 75.0,
+        'currency': 'USD',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+
 </head>
 
 <body>
   <div class="wrap">
 
+    <!-- LOGO -->
     <img src="./img/asheville_airport_express_logo.png" class="logo" alt="Asheville Airport Express Logo" />
 
+    <!-- TAGLINE -->
     <div class="card center">
       <div class="hero-title">"On Time, Every Time"</div>
     </div>
 
+    <!-- CALL SECTION -->
     <div class="card center">
       <div class="section-title">Reserve Your Ride - Call Today!</div>
 
-      <a href="tel:+18283977377" class="call-btn"
-         onclick="gtag('event', 'conversion', {
-           'send_to': 'AW-667098794/REPLACE_WITH_CONVERSION_LABEL'
-         });">
+      <a href="tel:+18283977377"
+         class="call-btn"
+         onclick="return gtag_report_conversion('tel:+18283977377');">
         (828) 397-7377
       </a>
     </div>
 
+    <!-- REVIEWS -->
     <a href="https://g.page/r/CVkWkcXdZyyOEAE" class="reviews-link-wrap" target="_blank" rel="noopener noreferrer">
       <div class="reviews-outer">
         <div class="reviews-inner">
