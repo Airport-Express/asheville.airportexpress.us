@@ -89,45 +89,40 @@ body {
   color: var(--text);
 }
 
-/* ===============================
-   UPDATED BUTTONS (IMPROVED)
-=============================== */
+/* =============================== */
+/* 🔥 3D BUTTON (UPDATED) */
+/* =============================== */
+
 .call-btn,
 .book-btn {
   display: block;
   width: 100%;
   max-width: 340px;
-  margin: 0 auto;
-  padding: 20px 22px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 22px;
   border-radius: 999px;
-  background: linear-gradient(180deg, var(--accent-hover), var(--accent));
+
+  background: linear-gradient(180deg, #f1d46f 0%, #d4af37 100%);
   color: #000;
+
   font-weight: 800;
   font-size: 1.22rem;
+  letter-spacing: 0.2px;
   text-decoration: none;
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.18);
+
+  border: 1px solid rgba(0,0,0,0.2);
+
+  /* 3D depth */
+  box-shadow:
+    0 4px 0 #b89122,
+    0 10px 18px rgba(0,0,0,0.35);
+
+  transition: all 0.15s ease;
   cursor: pointer;
 
-  box-shadow:
-    0 14px 32px rgba(212,175,55,0.38),
-    0 0 0 4px rgba(212,175,55,0.08),
-    0 2px 0 rgba(0,0,0,0.22);
-
-  transition: transform 0.12s ease, box-shadow 0.12s ease;
-}
-
-.call-btn:hover,
-.book-btn:hover {
-  transform: translateY(-1px);
-}
-
-.call-btn:active,
-.book-btn:active {
-  transform: scale(0.97);
-  box-shadow:
-    0 8px 18px rgba(212,175,55,0.25),
-    0 1px 0 rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* AFTER HOURS */
