@@ -14,6 +14,46 @@
   <meta property="og:url" content="https://asheville.airportexpress.us/airport-pickup.html" />
 
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Asheville Airport Express",
+    "telephone": "+1-828-397-7377",
+    "areaServed": "Asheville, NC",
+    "serviceType": ["Airport Transportation", "Private Airport Car Service", "Airport Transfer Service"]
+  }
+  </script>
+
+  <!-- Google Ads + GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128182436"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18128182436');
+    gtag('config', 'G-MJ918GX7BG');
+  </script>
+
+  <!-- Google Ads conversion trigger -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18128182436/XthuCN677qQcEKS5mMRD',
+        'value': 40.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 </head>
 <body>
   <header class="site-header">
@@ -41,7 +81,7 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="/booking.html">Book Your Ride</a>
-            <a class="btn btn-secondary" href="tel:+18285551234">Call Now</a>
+            <a class="btn btn-secondary" href="tel:+18283977377" onclick="return gtag_report_conversion('tel:+18283977377');">Call Now</a>
           </div>
           <p class="trust-note">Private airport pickup · Scheduled rides · Local Asheville service</p>
         </div>
@@ -125,7 +165,7 @@
         </p>
         <div class="hero-actions center-actions">
           <a class="btn btn-primary" href="/booking.html">Book Airport Pickup</a>
-          <a class="btn btn-secondary" href="tel:+18285551234">Call to Request a Ride</a>
+          <a class="btn btn-secondary" href="tel:+18283977377" onclick="return gtag_report_conversion('tel:+18283977377');">Call to Request a Ride</a>
         </div>
       </div>
     </section>
