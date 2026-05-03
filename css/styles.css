@@ -914,3 +914,39 @@ body.landing-page {
     font-size: .84rem;
   }
 }
+
+/* =============================== */
+/* HEADER LOGO FIX (ADD AT BOTTOM) */
+/* =============================== */
+
+.landing-page .brand .logo {
+  height: 40px;
+  width: auto;
+  margin: 0;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+/* =============================== */
+/* HEADER CALL BUTTON */
+/* =============================== */
+
+.header-call {
+  margin-left: auto;
+  min-height: 44px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .landing-page .brand .logo {
+    height: 34px;
+  }
+
+  .header-call {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+}
+
