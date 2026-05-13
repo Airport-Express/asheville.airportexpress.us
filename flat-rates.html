@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Flat Rate AVL Airport Transportation | Airport Express</title>
+  <title>Flat Rate Asheville Airport Taxi & Shuttle | AVL Airport Transportation</title>
 
   <meta
     name="description"
-    content="Flat-rate airport transportation for Asheville Regional Airport (AVL). Professional drivers, premium XL vehicles, direct terminal pickup, and 24/7 availability."
+    content="Flat-rate Asheville airport taxi, airport shuttle, and private airport transportation for Asheville Regional Airport (AVL). Scheduled service, direct terminal pickup, premium XL vehicles, and 24/7 availability."
   />
 
   <link
@@ -18,6 +18,69 @@
   />
 
   <link rel="stylesheet" href="/css/styles.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Flat Rate Asheville Airport Taxi & Shuttle | Airport Express" />
+  <meta property="og:description" content="Flat-rate AVL airport transportation with scheduled service, direct terminal pickup, premium XL vehicles, and 24/7 availability." />
+  <meta property="og:url" content="https://asheville.airportexpress.us/flat-rate.html" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Asheville Airport Express",
+    "telephone": "+1-828-397-7377",
+    "areaServed": "Asheville, NC",
+    "serviceType": [
+      "Airport Taxi",
+      "Airport Shuttle",
+      "Airport Transportation",
+      "Private Airport Car Service",
+      "AVL Airport Transportation",
+      "Direct Terminal Pickup"
+    ],
+    "url": "https://asheville.airportexpress.us/flat-rate.html"
+  }
+  </script>
+
+  <!-- Google Ads + GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18128182436"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'AW-18128182436');
+    gtag('config', 'G-MJ918GX7BG');
+  </script>
+
+  <!-- Click-to-call conversion -->
+  <script>
+    function gtag_report_conversion(url) {
+
+      var callback = function () {
+
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+
+      };
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18128182436/XthuCN677qQcEKS5mMRD',
+        'value': 75.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+
+      return false;
+    }
+  </script>
 
 </head>
 
@@ -31,7 +94,7 @@
       <img
         src="./img/acadia_trans_logo_wht.png"
         class="hero-image"
-        alt="Airport Express GMC Acadia"
+        alt="Asheville Airport Express flat rate airport taxi and shuttle vehicle"
       />
 
     </div>
@@ -72,21 +135,17 @@
           <div class="time-row">
 
             <div class="time-col">
-
               <span class="time-value">
                 4am - 8am
               </span>
-
             </div>
 
             <div class="time-divider"></div>
 
             <div class="time-col">
-
               <span class="time-value">
                 8pm - 12am
               </span>
-
             </div>
 
           </div>
@@ -137,6 +196,7 @@
       <a
         href="tel:+18283977377"
         class="call-btn"
+        onclick="return gtag_report_conversion('tel:+18283977377');"
       >
         Call Now
       </a>
@@ -167,11 +227,15 @@
       <div class="flat-description-stack">
 
         <div class="flat-description-line">
-          Professional Drivers • Premium XL Vehicles • Direct Terminal Pickup
+          Reliable Flat-Rate Transportation
         </div>
 
         <div class="flat-description-line">
-          Reliable Flat-Rate Transportation • Locally Owned &amp; Operated
+          Scheduled Service with Direct Terminal Pickup
+        </div>
+
+        <div class="flat-description-line">
+          Locally Owned &amp; Operated
         </div>
 
       </div>
