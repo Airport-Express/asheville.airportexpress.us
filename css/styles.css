@@ -1103,3 +1103,18 @@ body.landing-page {
 .card-247 .section-title {
   margin: 0;
 }
+.flat-description-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flat-description-line {
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.92rem;
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+}
