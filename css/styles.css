@@ -1118,3 +1118,14 @@ body.landing-page {
   letter-spacing: 0.1px;
   white-space: nowrap;
 }
+.desktop-number {
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+  .desktop-number {
+    display: inline;
+  }
+
+}
