@@ -1091,3 +1091,15 @@ body.landing-page {
 .flat-footer-links a:hover {
   text-decoration: underline;
 }
+.card-247 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 96px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.card-247 .section-title {
+  margin: 0;
+}
