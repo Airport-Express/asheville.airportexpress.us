@@ -1047,7 +1047,7 @@ body.landing-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2px;
+  gap: 3px;
   margin-top: 6px;
 }
 
@@ -1059,7 +1059,7 @@ body.landing-page {
 }
 
 .time-divider {
-  width: 1px;
+  width: 2px;
   height: 20px;
   background: rgba(255,255,255,0.18);
 }
