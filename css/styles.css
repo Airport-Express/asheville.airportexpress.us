@@ -1007,7 +1007,7 @@ body.landing-page {
 }
 
 .flat-rate-block {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   text-align: center;
 }
 
@@ -1033,7 +1033,7 @@ body.landing-page {
 
 .flat-rate-price {
   display: block;
-  margin-top: 6px;
+  margin-top: 3px;
   font-size: 1rem;
   font-weight: 800;
   color: #ffffff;
