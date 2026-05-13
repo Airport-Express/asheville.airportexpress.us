@@ -77,6 +77,35 @@
       font-feature-settings: "tnum";
     }
 
+    .time-row {
+      display: flex;
+      justify-content: center;
+      gap: 26px;
+      margin-top: 6px;
+    }
+
+    .time-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 110px;
+    }
+
+    .time-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      opacity: 0.92;
+      line-height: 1.1;
+    }
+
+    .time-value {
+      font-size: 0.82rem;
+      font-weight: 700;
+      opacity: 0.92;
+      line-height: 1.1;
+      margin-top: 2px;
+    }
+
     .flat-footer-links,
     .flat-footer-links a {
       color: #ffffff;
@@ -116,6 +145,7 @@
 
       <div class="description flat-rate-text">
 
+        <!-- DAILY -->
         <div class="flat-rate-block">
 
           <span class="flat-rate-line">
@@ -132,15 +162,40 @@
 
         </div>
 
+        <!-- EARLY / LATE -->
         <div class="flat-rate-block">
 
           <span class="flat-rate-line">
             Early AM &amp; Late PM
           </span>
 
-          <span class="flat-rate-sub">
-            4am - 8am :amp; 8pm - 12am
-          </span>
+          <div class="time-row">
+
+            <div class="time-col">
+
+              <span class="time-label">
+                Early AM
+              </span>
+
+              <span class="time-value">
+                4am - 8am
+              </span>
+
+            </div>
+
+            <div class="time-col">
+
+              <span class="time-label">
+                Late PM
+              </span>
+
+              <span class="time-value">
+                8pm - 12am
+              </span>
+
+            </div>
+
+          </div>
 
           <span class="flat-rate-price">
             $65
@@ -148,6 +203,7 @@
 
         </div>
 
+        <!-- SCHEDULED -->
         <div class="flat-rate-block">
 
           <span class="flat-rate-line">
@@ -164,6 +220,7 @@
 
         </div>
 
+        <!-- MILEAGE -->
         <div class="flat-rate-block">
 
           <span class="flat-rate-line">
