@@ -982,3 +982,108 @@ body.landing-page {
   }
 }
 
+/* =============================== */
+/* FLAT RATE PAGE */
+/* =============================== */
+
+.hero-image-wrap {
+  margin-bottom: 18px;
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: var(--shadow);
+}
+
+.flat-rate-text {
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: rgba(255,255,255,0.94);
+}
+
+.flat-rate-block {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.flat-rate-block:last-child {
+  margin-bottom: 0;
+}
+
+.flat-rate-line {
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.flat-rate-sub {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  opacity: 0.92;
+  margin-top: 3px;
+  line-height: 1.15;
+}
+
+.flat-rate-price {
+  display: block;
+  margin-top: 6px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+.time-row {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  margin-top: 6px;
+}
+
+.time-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 110px;
+}
+
+.time-label,
+.time-value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  opacity: 0.92;
+  line-height: 1.1;
+}
+
+.time-value {
+  margin-top: 2px;
+}
+
+.reviews-click {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.flat-footer-links,
+.flat-footer-links a {
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.flat-footer-links a:hover {
+  text-decoration: underline;
+}
