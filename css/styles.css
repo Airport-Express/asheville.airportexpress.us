@@ -1007,7 +1007,7 @@ body.landing-page {
 }
 
 .flat-rate-block {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -1046,7 +1046,7 @@ body.landing-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   margin-top: 6px;
 }
 
