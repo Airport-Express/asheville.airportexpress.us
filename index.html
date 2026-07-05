@@ -59,6 +59,107 @@
   }
   </script>
 
+  <!-- Modal Styles -->
+  <style>
+    .rate-modal-btn {
+      display: block;
+      width: 100%;
+      margin: 16px auto;
+      padding: 14px 18px;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: inherit;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #d4af37;
+      border-radius: 8px;
+      background: transparent;
+      color: inherit;
+    }
+
+    .rate-modal-btn:hover {
+      background: rgba(212, 175, 55, 0.12);
+    }
+
+    .rate-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 20px;
+    }
+
+    .rate-modal-content {
+      position: relative;
+      max-width: 640px;
+      margin: 80px auto;
+      padding: 30px 24px 28px;
+      background: #ffffff;
+      color: #000000;
+      border-radius: 10px;
+      font-family: inherit;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .rate-modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      border: none;
+      background: transparent;
+      font-size: 34px;
+      line-height: 1;
+      cursor: pointer;
+      color: #000000;
+    }
+
+    .rate-modal-title {
+      margin-bottom: 18px;
+      padding-right: 36px;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .rate-modal-list {
+      font-size: 18px;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    .rate-modal-list div {
+      margin-bottom: 4px;
+    }
+
+    .rate-note {
+      margin-top: 18px;
+      font-size: 15px;
+      font-style: italic;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    @media (max-width: 600px) {
+      .rate-modal-content {
+        margin: 50px auto;
+        padding: 26px 18px 24px;
+      }
+
+      .rate-modal-title {
+        font-size: 18px;
+      }
+
+      .rate-modal-list {
+        font-size: 16px;
+      }
+
+      .rate-modal-btn {
+        font-size: 16px;
+      }
+    }
+  </style>
+
   <!-- Google Ads + GA4 -->
   <script
     async
@@ -123,7 +224,7 @@
 
     </div>
 
-    <!-- PRICING -->
+    <!-- STANDARD RATES -->
     <div class="card center">
 
       <div class="hero-title">
@@ -132,7 +233,6 @@
 
       <div class="description flat-rate-text">
 
-        <!-- STANDARD RATES -->
         <div class="flat-rate-block">
 
           <span class="flat-rate-line">
@@ -145,19 +245,6 @@
 
         </div>
 
-        <div class="flat-rate-block">
-
-          <span class="flat-rate-line">
-            Minimum Transportation Fare
-          </span>
-
-          <span class="flat-rate-price">
-            $35
-          </span>
-
-        </div>
-
-        <!-- ADDITIONAL FEES -->
         <div class="flat-rate-block">
 
           <span class="flat-rate-line">
@@ -178,6 +265,18 @@
 
         </div>
 
+        <div class="flat-rate-block">
+
+          <span class="flat-rate-line">
+            Minimum Transportation Fare
+          </span>
+
+          <span class="flat-rate-price">
+            $35
+          </span>
+
+        </div>
+
       </div>
 
     </div>
@@ -191,158 +290,21 @@
 
       <div class="description flat-rate-text">
 
-        <!-- REGIONAL AIRPORTS -->
-        <div class="flat-rate-block">
+        <button
+          type="button"
+          class="rate-modal-btn"
+          onclick="openRateModal('airportRatesModal')"
+        >
+          Asheville Airport (AVL) ↔ Regional Airports
+        </button>
 
-          <span class="flat-rate-line">
-            Asheville Airport (AVL) ↔ Regional Airports
-          </span>
-
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Greenville-Spartanburg Int. Airport (GSP)
-          </span>
-          <span class="flat-rate-price">
-            $185
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Tri-Cities Airport (TRI)
-          </span>
-          <span class="flat-rate-price">
-            $275
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Charlotte Douglas Int. Airport (CLT)
-          </span>
-          <span class="flat-rate-price">
-            $335
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            McGhee Tyson Airport (TYS)
-          </span>
-          <span class="flat-rate-price">
-            $435
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Raleigh-Durham Int. Airport (RDU)
-          </span>
-          <span class="flat-rate-price">
-            $755
-          </span>
-        </div>
-
-        <!-- REGIONAL DESTINATIONS -->
-        <div class="flat-rate-block">
-
-          <span class="flat-rate-line">
-            Asheville Airport (AVL) ↔ Regional Destinations
-          </span>
-
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Asheville, NC
-          </span>
-          <span class="flat-rate-price">
-            $55
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Brevard, NC
-          </span>
-          <span class="flat-rate-price">
-            $65
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Black Mountain, NC
-          </span>
-          <span class="flat-rate-price">
-            $85
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Mars Hill, NC
-          </span>
-          <span class="flat-rate-price">
-            $95
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Hot Springs, NC
-          </span>
-          <span class="flat-rate-price">
-            $165
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Cherokee, NC
-          </span>
-          <span class="flat-rate-price">
-            $175
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Highlands, NC
-          </span>
-          <span class="flat-rate-price">
-            $185
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Spruce Pine, NC
-          </span>
-          <span class="flat-rate-price">
-            $195
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Elk Park, NC
-          </span>
-          <span class="flat-rate-price">
-            $255
-          </span>
-        </div>
-
-        <div class="flat-rate-block">
-          <span class="flat-rate-line">
-            Boone, NC
-          </span>
-          <span class="flat-rate-price">
-            $265
-          </span>
-        </div>
+        <button
+          type="button"
+          class="rate-modal-btn"
+          onclick="openRateModal('destinationRatesModal')"
+        >
+          Asheville Airport (AVL) ↔ Regional Destinations
+        </button>
 
         <div class="flat-rate-block">
 
@@ -483,6 +445,103 @@
 
   </div>
 
+  <!-- REGIONAL AIRPORTS MODAL -->
+  <div id="airportRatesModal" class="rate-modal">
+
+    <div class="rate-modal-content">
+
+      <button
+        type="button"
+        class="rate-modal-close"
+        onclick="closeRateModal('airportRatesModal')"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="rate-modal-title">
+        Asheville Airport (AVL) ↔ Regional Airports
+      </div>
+
+      <div class="rate-modal-list">
+        <div>$185 – Greenville Spartanburg Int. Airport (GSP)</div>
+        <div>$275 – Tri Cities Airport (TRI)</div>
+        <div>$335 – Charlotte Douglas Int. Airport (CLT)</div>
+        <div>$435 – McGhee Tyson Airport (TYS)</div>
+        <div>$755 – Raleigh Durham Int. Airport (RDU)</div>
+      </div>
+
+      <div class="rate-note">
+        Flat rates are transportation charges only. Additional fees apply when applicable.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- REGIONAL DESTINATIONS MODAL -->
+  <div id="destinationRatesModal" class="rate-modal">
+
+    <div class="rate-modal-content">
+
+      <button
+        type="button"
+        class="rate-modal-close"
+        onclick="closeRateModal('destinationRatesModal')"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="rate-modal-title">
+        Asheville Airport (AVL) ↔ Regional Destinations
+      </div>
+
+      <div class="rate-modal-list">
+        <div>$55&nbsp;&nbsp; – Asheville, NC</div>
+        <div>$65&nbsp;&nbsp; – Brevard, NC</div>
+        <div>$85&nbsp;&nbsp; – Black Mountain, NC</div>
+        <div>$95&nbsp;&nbsp; – Mars Hill, NC</div>
+        <div>$165 – Hot Springs, NC</div>
+        <div>$175 – Cherokee, NC</div>
+        <div>$185 – Highlands, NC</div>
+        <div>$195 – Spruce Pine, NC</div>
+        <div>$255 – Elk Park, NC</div>
+        <div>$265 – Boone, NC</div>
+      </div>
+
+      <div class="rate-note">
+        Flat rates are transportation charges only. Additional fees apply when applicable.
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MODAL SCRIPT -->
+  <script>
+    function openRateModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeRateModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.addEventListener('click', function(event) {
+      if (event.target.classList.contains('rate-modal')) {
+        event.target.style.display = 'none';
+      }
+    });
+
+    window.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        document.querySelectorAll('.rate-modal').forEach(function(modal) {
+          modal.style.display = 'none';
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
-
